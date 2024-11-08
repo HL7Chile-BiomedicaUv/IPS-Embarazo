@@ -44,8 +44,8 @@ dependencies:
 # sub-pages.
 #
 pages:
-#   index.md:
-#     title: Example Home
+  index.md:
+    title: Resumen Clínico de Pacientes Embarazadas Chile
 #   implementation.xml:
 #   examples.xml:
 #     title: Examples Overview
