@@ -18,7 +18,7 @@ Description: "Perfil de paciente basado en la IPS chilena."
 * identifier.value 1..1 MS
 
 * name 1..* MS
-* name obeys ips-pat-1
+//* name obeys ips-pat
 * name ^requirements = "Debe siempre existir un nombre sobre el cual se pueda requerir información del paciente"
 * name.text MS
 * name.text ^definition = "En caso de no poderse describir adecuadamenre el nombre se puede escribir en este campo de texto como lo interpreta el registrador"
@@ -35,7 +35,7 @@ Description: "Perfil de paciente basado en la IPS chilena."
 
 * address MS
 
-Invariant: ips-pat-1
-Description: "Patient.name.given, Patient.name.family o Patient.name.text DEBEN estar presentes"
-Severity: #error
-Expression: "family.exists() or given.exists() or text.exists()"
+//Invariant: ips-pat-1
+//Description: "Patient.name.given, Patient.name.family o Patient.name.text DEBEN estar presentes"
+//Severity: #error
+//Expression: "family.exists() or given.exists() or text.exists()"
