@@ -23,7 +23,7 @@ Description: "Perfil del rol del prestador basado en la IPS chilena. Este perfil
 
 * code 1..* MS
 * code only CodeableConceptIPS
-* code from HealthcareProfessionalRolesUvIps (preferred)
+* code from VSRolProfesional (preferred)
 
 * specialty 0..* MS
 * specialty only CodeableConceptIPS
