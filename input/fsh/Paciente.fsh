@@ -1,10 +1,10 @@
 Alias: Edad =  https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/Edad
 
-Profile: Paciente
+Profile: PacienteEmbCL
 Parent: PacienteCLIps
-Id: Paciente-embarazo-ips
+Id: Paciente-embarazo-cl-ips
 Title: "Paciente (Embarazo-CL)"
-Description: "Perfil de paciente basado en la IPS chilena. Este perfil define como los datos propios de la paciente deben estructurarse dentro del resumen clínico."
+Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe el recurso Paciente para representar a la paciente de acuerdo a su estado de embarazo, o en cualquier otro caso, dependiendo de su estado ligado a una observación."
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"

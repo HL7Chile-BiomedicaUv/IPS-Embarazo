@@ -2,11 +2,11 @@ Alias: VSRol =  http://hl7.org/fhir/uv/ips/ValueSet/healthcare-professional-role
 Alias: VSEspecialidades =  https://hl7chile.cl/fhir/ig/clcore/ValueSet/VSEspecialidadesCL
 //Alias: CodeableConceptIPS = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 
-Profile: RolPrestador
+Profile: RolPrestadorEmbCL
 Parent: RolPrestadorClIps
-Id: RolPrestador-cl-ips
+Id: RolPrestador-embarazo-cl-ips
 Title: "Rol de Prestador Individual (Embarazo-CL)"
-Description: "Este perfil restringe el recurso profesional para representar a un profesional que actúa como observador de resultaos expresados"
+Description: "Perfil del rol del prestador basado en la IPS chilena. Este perfil restringe el recurso de rol de prestador para representar a un profesional que actúa como observador de resultados expresados."
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"
@@ -15,10 +15,10 @@ Description: "Este perfil restringe el recurso profesional para representar a un
 * ^contact.telecom.value = "http://www.hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* practitioner only Reference(Prestador-cl-ips)
+* practitioner only Reference(Prestador-embarazo-cl-ips)
 * practitioner 1..1 MS
 
-* organization only Reference(Organizacion-cl-ips)
+* organization only Reference(Organizacion-embarazo-cl-ips)
 * organization 1..1 MS
 
 * code 1..* MS

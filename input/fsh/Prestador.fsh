@@ -1,8 +1,8 @@
-Profile: Prestador
+Profile: PrestadorEmbCL
 Parent: PrestadorClIps
-Id: Prestador-embarazo-ips
+Id: Prestador-embarazo-cl-ips
 Title: "Prestador Individual (Embarazo-CL)"
-Description: "Perfil del prestador basado en la IPS chilena. Este perfil define como deben estructurarse los datos propios del prestador que brinda la atención a la paciente."
+Description: "Perfil del prestador basado en la IPS chilena. Este perfil restringe el recurso Prestador para representar un profesional de la salud que actúa como observador de resultados expresados. Es un profesional ligado a la atención de pacientes embarazadas (o deependiendo de su estado)."
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"
