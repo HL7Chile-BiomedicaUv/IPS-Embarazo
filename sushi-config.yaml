@@ -27,6 +27,8 @@ publisher:
 dependencies:
   hl7.fhir.cl.clcore: 1.9.1
   hl7.fhir.cl.clips: dev
+  hl7.fhir.uv.ips: 2.0.0
+
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
