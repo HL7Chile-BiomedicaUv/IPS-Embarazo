@@ -17,4 +17,5 @@ Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe
 * valueCodeableConcept  1..1 MS
 * valueCodeableConcept only CodeableConceptIPS
 * valueCodeableConcept from PregnancyStatusUvIps (preferred)
-* valueCodeableConcept ^sliceName = "Estado de Embarazo"
+* valueCodeableConcept ^sliceName = "valueCodeableConcept"
+
