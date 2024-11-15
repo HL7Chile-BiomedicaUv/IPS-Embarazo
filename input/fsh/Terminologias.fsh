@@ -16,7 +16,7 @@ Description: "Códigos sobre el rol del profesional definidos en Snomed-CT."
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
-* include codes from system http://snomed.info/sct
+//* include codes from system http://snomed.info/sct
 
 * SNOMED_CT_INT#6816002 "Specialized nurse"
 * SNOMED_CT_INT#11935004 "Obstetrician"
