@@ -27,4 +27,4 @@ Description: "Perfil del rol del prestador basado en la IPS chilena. Este perfil
 
 * specialty 0..* MS
 * specialty only CodeableConceptIPS
-* specialty from VSEspecialidadesCL (preferred)
+* specialty from  VSEspecialidadesEmb (preferred)
