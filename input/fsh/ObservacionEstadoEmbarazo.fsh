@@ -2,7 +2,7 @@ Profile: EstadoEmbarazoCL
 Parent: ObservationEstadoEmbarazoClIps
 Id: Estado-del-embarazo-cl-ips
 Title: "Estado del Embarazo (Embarazo-CL)"
-Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe el recurso Paciente para representar a la paciente de acuerdo a su estado de embarazo, o en cualquier otro caso, dependiendo de su estado ligado a una observación."
+Description: "Perfil de estado del embarazo basado en la IPS chilena. Este perfil restringe el recurso Observación para representar el estado en el que se encuentra la paciente, dependiendo de la observación."
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"
