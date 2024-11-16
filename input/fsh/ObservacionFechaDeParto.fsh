@@ -1,3 +1,5 @@
+Alias: $FechaEstimadaParto = http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips
+
 Profile: FechaEstimadaPartoCL
 Parent: ObservationEmbarazoFechaEstimadaDePartoClIps
 Id: Fecha-estimada-de-parto-cl-ips
@@ -13,7 +15,7 @@ Description: "Perfil de la fecha estimada de parto basado en la IPS chilena. Est
 
 * code 1..1 MS
 * code only CodeableConceptIPS
-* code from http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips (required)
+* code from $FechaEstimadaParto (required)
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "Códigos de fecha estimada de parto"
 * code ^binding.description = "Representa los códigos para la fecha estimada de parto."

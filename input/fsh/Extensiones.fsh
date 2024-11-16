@@ -34,3 +34,22 @@ Context: Observation
 
 * value[x] only CodeableConceptIPS
 * value[x] MS
+
+Extension: FechaAntecedente
+Id: FechaAntecedente
+Title: "Fecha del antecedente de otras gestaciones especificado por la paciente"
+Description: "Proporciona la fecha del antecente especificado por la paciente sobre otras gestaciones que ha tenido."
+Context: Observation
+
+* ^version = "0.1.0"
+* ^publisher = "HL7 Chile"
+* ^status = #draft
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* . ^short = "Fecha del antecedente proveniente de otra gestación"
+* . ^definition = "Proporciona la fecha del antecedente proveniente de otra gestación de la paciente."
+
+* value[x] only dateTime
+* value[x] MS
