@@ -101,11 +101,29 @@ Description: "Códigos sobre fecha de última regla de la paciente de Snomed-CT.
 
 * codes from system CSFechaUltimaRegla
 
+ValueSet: VSPartos
+Id: VSPartosIPS
+Title: "Tipos de Partos"
+Description: "Códigos sobre los de tipos de parto que pudo tener la paciente con anterioridad definidos en Snomed-CT."
 
+* ^experimental = false
+* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+* ^status = #active
+* ^date = "2024-10-20T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
-
-
-
+* SNOMED_CT_INT#267015005  "Past pregnancy history of full term delivery"
+* SNOMED_CT_INT#48782003 "Spontaneous vaginal delivery"
+* SNOMED_CT_INT#282020008 "Premature delivery"
+* SNOMED_CT_INT#289259007 "Vaginal delivery"
+* SNOMED_CT_INT#200144004 "Cesarean delivery"
+* SNOMED_CT_INT#48975005 "Stimulated labor"
+* SNOMED_CT_INT#302383004 "Forceps delivery"
+* SNOMED_CT_INT#260413007 "None"
 
 //CodeSystem: CSEspecialidadesEmb
 //Id: CSEspecialidadesEmbIPS

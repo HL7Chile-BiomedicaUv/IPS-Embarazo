@@ -22,8 +22,7 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 
 * code.extension contains FechaAntecedente named FechaAntecedente 0..1 MS
 * code.extension[FechaAntecedente] ^short = "Fecha del antecedente de una gestación anterior de la paciente"
-//* code.extension[FechaAntecedente].value[x] from VSFechaUltimaRegla (preferred)
-* code.extension[FechaAntecedente].value[x] ^binding.description = "Es usado para especificar la fecha de una gestación anterior de la paciente."
+//* code.extension[FechaAntecedente].value[x] ^binding.description = "Es usado para especificar la fecha de una gestación anterior de la paciente."
 
 * subject 1..1 MS
 * subject only Reference(PacienteEmbCL)
@@ -32,3 +31,10 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 * valueQuantity only Quantity
 * valueQuantity ^sliceName = "valueQuantity"
 
+* extension contains AntecedentesDePartos named AntecedentesDePartos 1..1 MS
+* extension[AntecedentesDePartos] ^short = "Antecedente relacionado al tipo de parto"
+* extension[AntecedentesDePartos].value[x] from VSPartos (preferred)
+* extension[AntecedentesDePartos].value[x] ^binding.description = "Es usado para especificar antecedentes respecto al o los tipos de parto que ha tenido la paciente."
+
+* extension contains NumeroDePartos named NumeroDePartos 1..1 MS
+* extension[NumeroDePartos] ^short = "Número de partos que ha tenido la paciente"
