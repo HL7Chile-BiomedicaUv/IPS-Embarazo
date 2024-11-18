@@ -125,6 +125,68 @@ Description: "Códigos sobre los de tipos de parto que pudo tener la paciente co
 * SNOMED_CT_INT#302383004 "Forceps delivery"
 * SNOMED_CT_INT#260413007 "None"
 
+ValueSet: VSPatologias
+Id: VSPatologiasIPS
+Title: "Condición de salud o patologías de la paciente"
+Description: "Códigos sobre las condiciones o patologías que padece la paciente provenientes de Snomed-CT."
+
+* ^experimental = false
+* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+* ^status = #active
+* ^date = "2024-10-20T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
+
+* SNOMED_CT_INT#73211009 "Diabetes mellitus"
+* SNOMED_CT_INT#398254007 "Pre-eclampsia"
+* SNOMED_CT_INT#235888006 "Cholestasis of pregnancy"
+* SNOMED_CT_INT#22033007 "Fetal growth restriction"
+* SNOMED_CT_INT#430881000 "Second trimester bleeding"
+* SNOMED_CT_INT#297106006 "Primary infertility"
+* SNOMED_CT_INT#297121000 "Secondary infertility"
+* SNOMED_CT_INT#414916001 "Obesity"
+* SNOMED_CT_INT#38341003 "Hypertensive disorder"
+* SNOMED_CT_INT#84757009 "Epilepsy"
+* SNOMED_CT_INT#234467004 "Thrombophilia"
+* SNOMED_CT_INT#254837009 "Malignant tumor of breast"
+* SNOMED_CT_INT#363354003 "Cancer of cervix"
+* SNOMED_CT_INT#56265001 "Cardiopathy"
+* SNOMED_CT_INT#49601007 "Cardiovascular disease"
+* SNOMED_CT_INT#40733004 "Infectious disease" 
+* SNOMED_CT_INT#56717001 "Tuberculosis"
+* SNOMED_CT_INT#370992007 "Dyslipidemia"
+* SNOMED_CT_INT#13644009 "Hypercholesterolemia"
+* SNOMED_CT_INT#40930008 "Hypothyroidism"
+* SNOMED_CT_INT#90708001 "Kidney disease"
+* SNOMED_CT_INT#240658000 "Chronic Chagas' disease"
+* SNOMED_CT_INT#240653009 "Acute Chagas' disease"
+* SNOMED_CT_INT#74732009 "Mental disorder"
+* SNOMED_CT_INT#199257008 "Mental disorders during pregnancy, childbirth and the puerperium"
+* SNOMED_CT_INT#15927341000119106 "Carrier of sexually transmitted disease"
+* SNOMED_CT_INT#8098009 "Sexually transmitted infectious disease"
+* SNOMED_CT_INT#165816005 "HIV detected"
+* SNOMED_CT_INT#76272004 "Syphilis"
+* SNOMED_CT_INT#105629000 "Chlamydial infection"
+* SNOMED_CT_INT#274116002 "Herpes in pregnancy"
+* SNOMED_CT_INT#15628003 "Gonorrhea"
+* SNOMED_CT_INT#114881000119108 "Maternal gonorrhea during pregnancy"
+* SNOMED_CT_INT#237091009 "Infective vaginitis"
+* SNOMED_CT_INT#721266009 "Infection of skin and mucous membrane caused by human papillomavirus"
+* SNOMED_CT_INT#68566005 "Urinary tract infectious disease"
+* SNOMED_CT_INT#894362851000119109 "COVID-19 during pregnancy"
+* SNOMED_CT_INT#128046007 "Disease of oral mucosa"
+* SNOMED_CT_INT#235053005 "Infectious disease of oral mucosa"
+* SNOMED_CT_INT#160245001 "No current problems or disability"
+
+
+
+
+
+
+
 //CodeSystem: CSEspecialidadesEmb
 //Id: CSEspecialidadesEmbIPS
 //Title: "Especialidad del profesional"

@@ -90,3 +90,21 @@ Context: Observation
 * . ^definition = "Proporciona el número de partos de acuerdo al tipo de parto de la paciente"
 * value[x] only integer
 * value[x] MS
+
+Extension: CondicionPostParto
+Id: CondicionPostParto
+Title: "Condición post-parto anterior"
+Description: "Proporciona si es que la paciente qeudó con alguna condición del post-parto anterior."
+Context: Observation
+
+* ^version = "0.1.0"
+* ^publisher = "HL7 Chile"
+* ^status = #draft
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* . ^short = "Condición post-parto anterior"
+* . ^definition = "Proporciona si es que la paciente quedó con alguna condición del post-parto anterior."
+* value[x] only string
+* value[x] MS
