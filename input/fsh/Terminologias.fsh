@@ -181,11 +181,59 @@ Description: "Códigos sobre las condiciones o patologías que padece la pacient
 * SNOMED_CT_INT#235053005 "Infectious disease of oral mucosa"
 * SNOMED_CT_INT#160245001 "No current problems or disability"
 
+ValueSet: VSDrogasBlandasYDuras
+Id: VSDrogasBlandasYDurasIPS
+Title: "Drogas duras y blandas."
+Description: "Códigos sobre el consumo de drogas duras y blandas provenientes de Snomed-CT."
 
+* ^experimental = false
+* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+* ^status = #active
+* ^date = "2024-10-20T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
+* SNOMED_CT_INT#449868002 "Smokes tobacco daily (finding)"
+* SNOMED_CT_INT#428041000124106 "Occasional tobacco smoker (finding)"
+* SNOMED_CT_INT#8517006 "Ex-smoker (finding)"
+* SNOMED_CT_INT#266919005 "Never smoked tobacco (finding)"
+* SNOMED_CT_INT#77176002 "Smoker (finding)"
+* SNOMED_CT_INT#266927001 "Tobacco smoking consumption unknown (finding)"
+* SNOMED_CT_INT#230063004 "Heavy cigarette smoker (finding)"
+* SNOMED_CT_INT#230060001 "Light cigarette smoker (finding)"
+* SNOMED_CT_INT#228377000 "Smokes drugs (finding)"
+* SNOMED_CT_INT#307052004 "Illicit drug use (finding)"
+* SNOMED_CT_INT#44870007 "Misused drugs in past (finding)"
+* SNOMED_CT_INT#417284009 "Current drug user (finding)"
+* SNOMED_CT_INT#361049005 "Habitual drug user (finding)"
+* SNOMED_CT_INT#70545002 "Narcotic drug user (finding)"
+* SNOMED_CT_INT#226034001 "Injecting drug user (finding)"
+* SNOMED_CT_INT#105546006 "Occasional drug abuser (finding)"
+* SNOMED_CT_INT#702771005 "Illicit drug use unknown (finding)"
+* SNOMED_CT_INT#741063003 "Illicit drug injection in last 12 months (finding)"
+* SNOMED_CT_INT#428493006 "Crack cocaine misuse (finding)"
+* SNOMED_CT_INT#416246006 "Prolonged high dose use of cannabis (finding)"
 
+ValueSet: VSUCUM
+Id: VSUCUMIPS
+Title: "Códigos UCUM sobre el consumo de alcohol"
+Description: "Códigos UCUM sobre el consumo de alcohol."
 
+* ^experimental = false 
+* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+* ^status = #active
+* ^date = "2024-10-20T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+* ^copyright = "This value set includes content from UCUM, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
+* UCUM#d "per day"
+* UCUM#wk "per week"
 
 //CodeSystem: CSEspecialidadesEmb
 //Id: CSEspecialidadesEmbIPS
