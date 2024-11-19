@@ -16,11 +16,20 @@ Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe
 * identifier 1..* MS //EL paciente puede tener más de un identificador; suele ser el RUN nacional
 * identifier.system 1..1 MS
 * identifier.value 1..1 MS
+* identifier.use 1..1 MS
 * identifier ^slicing.discriminator.type = #type
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slicing para determinar otros tipos de identificadores como pasaporte, n° de ficha clínica, etc."
 * identifier ^slicing.ordered = false
+
+//Identificador RUN
+* identifier contains RUN 1..1 MS
+* identifier[RUN].system = "http://regcivil.cl/Validacion/RUN"
+* identifier[RUN].value = "12241365-k" //RUN
+  * ^short = "RUN nacional como Identificador"
+
+//Identificador Otro
 * identifier contains OtrosIdentificadores 0..1 MS
 * identifier[OtrosIdentificadores].system = "http://example.org/identifier-system"
 * identifier[OtrosIdentificadores].value = "ZAB0000221" //N° de pasaporte
