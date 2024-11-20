@@ -108,3 +108,21 @@ Context: Observation
 * . ^definition = "Proporciona si es que la paciente quedó con alguna condición del post-parto anterior."
 * value[x] only string
 * value[x] MS
+
+Extension: DetallesProcedimiento
+Id: DetallesProcedimiento
+Title: "Detalles del procedimiento"
+Description: "Detalles escritos sobre el procedimiento que se realizó la paciente."
+Context: Procedure
+
+* ^version = "0.1.0"
+* ^publisher = "HL7 Chile"
+* ^status = #draft
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* . ^short = "Condición post-parto anterior"
+* . ^definition = "Proporciona si es que la paciente quedó con alguna condición del post-parto anterior."
+* value[x] only string
+* value[x] MS

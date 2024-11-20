@@ -183,7 +183,7 @@ Description: "Códigos sobre las condiciones o patologías que padece la pacient
 
 ValueSet: VSDrogasBlandasYDuras
 Id: VSDrogasBlandasYDurasIPS
-Title: "Drogas duras y blandas."
+Title: "Drogas duras y blandas"
 Description: "Códigos sobre el consumo de drogas duras y blandas provenientes de Snomed-CT."
 
 * ^experimental = false
@@ -230,16 +230,33 @@ Description: "Códigos UCUM sobre el consumo de alcohol."
 * ^contact.telecom.system = #email
 * ^contact.telecom.value = "chair@hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-* ^copyright = "This value set includes content from UCUM, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
+* ^copyright = "This value set includes content from UCUM, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of UCUM is not covered by this agreement" 
 
 * UCUM#d "per day"
 * UCUM#wk "per week"
 
-//CodeSystem: CSEspecialidadesEmb
-//Id: CSEspecialidadesEmbIPS
-//Title: "Especialidad del profesional"
-//Description: "Códigos sobre la especialidad del profesional definidos en Snomed-CT."
+ValueSet: VSProcedimientos
+Id: VSProcedimientosIPS
+Title: "Procedimientos quirúrgicos que se ha realizado la paciente anteriormente."
+Description: "Códigos sobre procedimientos quirúrgicos que se ha realizado la paciente provenientes de Snomed-CT."
 
+* ^experimental = false
+* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+* ^status = #active
+* ^date = "2024-10-20T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
+
+* SNOMED_CT_INT#408469009 "Breast surgery"
+* SNOMED_CT_INT#183988005 "Gynecological operation planned"
+* SNOMED_CT_INT#386809009 "Operation on fetus"
+* SNOMED_CT_INT#237015004 "Surgical control of postpartum hemorrhage"
+* SNOMED_CT_INT#55565007 "Cardiac failure after obstetrical surgery AND/OR other procedure including delivery"
+* SNOMED_CT_INT#17744000 "Subtotal hysterectomy after cesarean delivery"
+* SNOMED_CT_INT#787480003 "No known procedures"
 
 
 

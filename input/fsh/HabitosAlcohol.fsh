@@ -16,5 +16,5 @@ Description: "Perfil de hábitos basado en la IPS chilena. Este perfil restringe
 
 * valueQuantity 0..1
 * valueQuantity only QuantityIPS
-* valueQuantity from VSUCUM
+* valueQuantity from VSUCUM (preferred)
 * valueQuantity ^sliceName = "valueQuantity"
