@@ -36,7 +36,7 @@ Description: "Códigos sobre el rol del profesional definidos en Snomed-CT."
 * SNOMED_CT_INT#309452001 "Midwifery grade"	
 * SNOMED_CT_INT#309453006 "Midwife"
 * SNOMED_CT_INT#397903001 "Staff grade obstetrician"
-//* SNOMED_CT_INT#158941003 "Matron - nursery"
+* SNOMED_CT_INT#158941003 "Matron - nursery"
 * SNOMED_CT_INT#79898004  "Auxiliary midwife"
 
 ValueSet: VSEspecialidadesEmb
@@ -97,7 +97,7 @@ Description: "Códigos sobre fecha de última regla de la paciente de Snomed-CT.
 * ^contact.telecom.system = #email
 * ^contact.telecom.value = "chair@hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
+//* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
 * codes from system CSFechaUltimaRegla
 
@@ -116,6 +116,8 @@ Description: "Códigos sobre los de tipos de parto que pudo tener la paciente co
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
+* include codes from system CSOtrosDatos
+
 * SNOMED_CT_INT#267015005  "Past pregnancy history of full term delivery"
 * SNOMED_CT_INT#48782003 "Spontaneous vaginal delivery"
 * SNOMED_CT_INT#282020008 "Premature delivery"
@@ -123,7 +125,9 @@ Description: "Códigos sobre los de tipos de parto que pudo tener la paciente co
 * SNOMED_CT_INT#200144004 "Cesarean delivery"
 * SNOMED_CT_INT#48975005 "Stimulated labor"
 * SNOMED_CT_INT#302383004 "Forceps delivery"
-* SNOMED_CT_INT#260413007 "None"
+* CSOtrosDatos#NI "Ninguno"
+* CSOtrosDatos#NE "No especifica"
+* CSOtrosDatos#OT "Otro"
 
 ValueSet: VSPatologias
 Id: VSPatologiasIPS
@@ -196,6 +200,8 @@ Description: "Códigos sobre el consumo de drogas duras y blandas provenientes d
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
+* include codes from system CSOtrosDatos
+
 * SNOMED_CT_INT#449868002 "Smokes tobacco daily (finding)"
 * SNOMED_CT_INT#428041000124106 "Occasional tobacco smoker (finding)"
 * SNOMED_CT_INT#8517006 "Ex-smoker (finding)"
@@ -216,6 +222,9 @@ Description: "Códigos sobre el consumo de drogas duras y blandas provenientes d
 * SNOMED_CT_INT#741063003 "Illicit drug injection in last 12 months (finding)"
 * SNOMED_CT_INT#428493006 "Crack cocaine misuse (finding)"
 * SNOMED_CT_INT#416246006 "Prolonged high dose use of cannabis (finding)"
+* CSOtrosDatos#NI "Ninguno"
+* CSOtrosDatos#NE "No especifica"
+* CSOtrosDatos#OT "Otro"
 
 ValueSet: VSUCUM
 Id: VSUCUMIPS
@@ -258,29 +267,38 @@ Description: "Códigos sobre procedimientos quirúrgicos que se ha realizado la 
 * SNOMED_CT_INT#17744000 "Subtotal hysterectomy after cesarean delivery"
 * SNOMED_CT_INT#787480003 "No known procedures"
 
+CodeSystem: CSOtrosDatos
+Id: CSOtrosDatos
+Title: "Códigos sobre si la paciente presenta o no el antecedente u otro."
+Description: "Códigos sobre si la paciente no presenta el antecedente o resultados, si no se especifica u otro."
+* ^experimental = false
+* ^caseSensitive = true
+* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+* ^status = #active
+* ^date = "2024-10-20T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
+* #NI "Ninguno"
+* #NE "No especifica"
+* #OT "Otro"
 
+ValueSet: VSOtrosDatos
+Id: VSOtrosDatos
+Title: "Datos de No presenta, No especifica u otro"
+Description: "Códigos provenientes del CodeSystem creado respecto a si la paciente no presenta el antecedente o resultados, si no se especifica u otro."
 
-//CodeSystem: CSConsumoTabaco
-//Id: CSConsumoTabaco
-//Title: "Códigos de Consumo de Tabaco"
-//Description: "Códigos de consumo de tabaco."
+* ^experimental = false
+* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+* ^status = #active
+* ^date = "2024-10-20T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+//* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
-//* ^experimental = false
-//* ^caseSensitive = true
-//* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
-//* ^status = #active
-//* ^date = "2024-10-20T00:00:00-03:00"
-//* ^contact.name = "HL7 Chile"
-//* ^contact.telecom.system = #email
-//* ^contact.telecom.value = "chair@hl7chile.cl"
-//* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-
-
-
-
-//Fecha estimada de parto: requerido
-//Data absent reason: requerido
-//Resultados embarazo: requerido
+* codes from system CSOtrosDatos
 
