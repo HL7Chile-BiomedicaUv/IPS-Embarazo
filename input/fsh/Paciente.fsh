@@ -24,7 +24,7 @@ Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe
 * identifier ^slicing.ordered = false
 
 //Identificador RUN
-* identifier contains RUN 1..1 MS
+* identifier contains RUN 0..1 MS
 * identifier[RUN].system ^short = "Sistema donde está codificado el RUN"
 * identifier[RUN].value ^short = "Número de RUN del paciente" //RUN
   * ^short = "RUN nacional como Identificador"
