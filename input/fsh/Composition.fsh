@@ -76,7 +76,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * custodian MS
 * relatesTo.target[x] only Identifier or Reference(Composition or CompositionEmbCL)
 
-* section 3.. MS
+* section 5.. MS
 
 * section ^short = "Secciones que componen el Resumen de Embarazos"
 * section ^definition = "Las secciones raíz que componen el documento de Resumen de Embarazos."
