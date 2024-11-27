@@ -10,7 +10,7 @@ Description: "Perfil de antecedentes quirúrgicos basado en la IPS chilena. Este
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
+//SE ELIMINO LA EXTENSION PARA DETALLES DE PROCEDIMIENTO DEJANDO NOTE
 * subject 1..1 MS
 * subject only Reference(PacienteEmbCL)
 
@@ -25,5 +25,5 @@ Description: "Perfil de antecedentes quirúrgicos basado en la IPS chilena. Este
   * actor only Reference(PacienteEmbCL or RelatedPerson or  DispositivoObservadorClIps or PrestadorEmbCL or RolPrestadorEmbCL or OrganizacionEmbCL)
   * onBehalfOf only Reference(OrganizacionEmbCL)
 
-* extension contains DetallesProcedimiento named DetallesProcedimiento 0..1 MS
-* extension[DetallesProcedimiento] ^short = "Detalles del procedimiento que se realizó la paciente con anterioridad, en caso de haberse realizado uno."
+* note 0..*
+* note  ^short = "Información/Detalles adicionales del procedimiento que se realizó la paciente con anterioridad, en caso de haberse realizado uno."

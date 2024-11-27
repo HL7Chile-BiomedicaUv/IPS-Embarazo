@@ -19,18 +19,14 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "Códigos de resultados de embarazos"
 * code ^binding.description = "Representa los códigos sobre gestaciones anteriores que ha tenido la paciente."
-
-* code.extension contains FechaAntecedente named FechaAntecedente 0..* MS
-* code.extension[FechaAntecedente] ^short = "Fecha del antecedente de una gestación anterior de la paciente"
-//* code.extension[FechaAntecedente].value[x] ^binding.description = "Es usado para especificar la fecha de una gestación anterior de la paciente."
-
+//se eliminó la extension fecha de antecedente, dado que existe effective[x]
 * subject 1..1 MS
 * subject only Reference(PacienteEmbCL)
 
 * valueQuantity 1..1 MS
 * valueQuantity only Quantity
 * valueQuantity ^sliceName = "valueQuantity"
-
+//VER ANTECEDENTES DE PARTO
 * code.extension contains AntecedentesDePartos named AntecedentesDePartos 0..* MS
 * code.extension[AntecedentesDePartos] ^short = "Antecedente relacionado al tipo de parto"
 * code.extension[AntecedentesDePartos].value[x] from VSPartos (preferred)

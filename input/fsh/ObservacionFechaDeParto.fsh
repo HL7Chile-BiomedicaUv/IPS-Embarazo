@@ -20,6 +20,7 @@ Description: "Perfil de la fecha estimada de parto basado en la IPS chilena. Est
 * code ^binding.extension.valueString = "Códigos de fecha estimada de parto"
 * code ^binding.description = "Representa los códigos para la fecha estimada de parto."
 
+//HACER PERFIL PARA FECHA DE ULTUMA REGLA
 * code.extension contains FechaUltimaRegla named FechaUltimaRegla 0..1 MS
 * code.extension[FechaUltimaRegla] ^short = "Fecha de última regla de la paciente"
 * code.extension[FechaUltimaRegla].value[x] from VSFechaUltimaRegla (preferred)

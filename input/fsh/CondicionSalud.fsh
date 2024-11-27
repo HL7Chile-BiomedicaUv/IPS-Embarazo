@@ -19,5 +19,6 @@ Description: "Perfil del uso de medicamentos basado en la IPS chilena. Este perf
 * code from VSPatologias
   * ^binding.description = "Código para una condición clínica (o problema ausente/desconocido) proveniente de SNOMED CT."
 
-* extension contains CondicionPostParto named CondicionPostParto 1..1 MS
-* extension[CondicionPostParto] ^short = "Condición post parto anterior de la paciente en caso de que haya sufrido alguna."
+//SE ELIMINO LA EXTENSION CONDICIONPOSTPARTO DADO QUE SE TIENE NOTE
+* note 0..* 
+* note ^short = "Información adicional de la condición de salud de la paciente. Puede indicar la condición post parto anterior en caso de que haya sufrido alguna."
