@@ -21,7 +21,7 @@ Alias: $Observation-pregnancy-outcome-uv-ips = http://hl7.org/fhir/uv/ips/Struct
 Alias: $Flag-alert-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips
 
 Profile: CompositionEmbCL
-Parent: Composition
+Parent: DocumentoClIps
 Id: CompositionEmb-cl-ips
 Title: "Documento - Composition (Embarazo-CL)"
 Description: """Documento clínico utilizado para representar el conjunto de datos del Resumen de Pacientes Embarazadas a nivel nacional a partir del Resumen Internacional de Paciente (IPS) - Chile.
@@ -75,41 +75,11 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * attester.party MS
 * custodian MS
 * relatesTo.target[x] only Identifier or Reference(Composition or CompositionEmbCL)
-* event ^slicing.discriminator[0].type = #pattern
-* event ^slicing.discriminator[=].path = "code"
-* event ^slicing.rules = #open
-//* event ^definition = "La principal actividad descrita por un IPS es la prestación de asistencia sanitaria durante un periodo de tiempo. \En la representación CDA del IPS esto se muestra estableciendo el valor de serviceEvent/@classCode a «PCPR» (prestación de asistencia) e indicando la duración durante la cual se prestó la asistencia en serviceEvent/effectiveTime. \En la representación FHIR debe utilizarse al menos un evento para registrar esta información.También pueden incluirse datos adicionales de fuera de esta duración si son relevantes para la atención prestada durante ese intervalo de tiempo (por ejemplo, revisados durante el intervalo de tiempo indicado). Por ejemplo, si el IPS es generado por un GP basado en la información registrada en su EHR-S, entonces el valor de inicio debe representar la fecha en la que comenzó la relación de tratamiento entre el paciente y el GP; y el valor final la fecha del último evento asistencial."
-* event contains careProvisioningEvent 0..1 MS
-* event[careProvisioningEvent] ^short = "La asistencia descrita en el documento"
-* event[careProvisioningEvent] ^definition = "La prestación de asistencia sanitaria durante un periodo de tiempo que este resumen está documentando."
-* event[careProvisioningEvent].code 1..1 MS
-* event[careProvisioningEvent].code = $v3-ActClass#PCPR
-* event[careProvisioningEvent].period MS
 
-* section 1.. MS
-* section ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section ^extension[=].valueString = "Sección"
-* section ^slicing.discriminator[0].type = #pattern
-* section ^slicing.discriminator[=].path = "code"
-* section ^slicing.ordered = false
-* section ^slicing.rules = #open
+* section 3.. MS
+
 * section ^short = "Secciones que componen el Resumen de Embarazos"
 * section ^definition = "Las secciones raíz que componen el documento de Resumen de Embarazos."
-* section.code 1.. MS
-* section.code only $CodeableConcept-uv-ips
-* section.text 1.. MS
-* section.emptyReason ..0
-* section.emptyReason ^mustSupport = false
-* section.section ..0
-* section.section ^mustSupport = false
-* section contains
-    sectionMedicamentos 1..1 MS and
-    sectionAlergias 1..1 MS and
-    sectionProblemas 1..1 MS and
-    sectionProcedimientos 1..1 MS and
-    sectionHistoricoHx 0..1 and
-    sectionHistoriaSocial 0..1 and
-    sectionEmbarazoHx 1..1
 
 * section[sectionMedicamentos] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionMedicamentos] ^extension[=].valueString = "Sección"
@@ -126,8 +96,6 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionMedicamentos].entry ^slicing.rules = #open
 * section[sectionMedicamentos].entry ^short = "Medicamentos relevantes para la salud del paciente"
 * section[sectionMedicamentos].entry ^definition = "Esta lista los medicamentos relevantes para el ámbito del resumen del paciente o se utiliza para indicar que se sabe que el sujeto no toma ninguna medicación relevante; o bien que no se dispone de información sobre medicamentos."
-* section[sectionMedicamentos].entry contains
-    listMedicamentos 1..* MS
  //   prescripciones 0..*
 * section[sectionMedicamentos].entry[listMedicamentos] only Reference(UsoDeMedicamentoCL)
 //* section[sectionMedicamentos].entry[prescripciones] only Reference(PrescripcionClIps)
@@ -145,7 +113,6 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionAlergias].entry ^slicing.rules = #open
 * section[sectionAlergias].entry ^short = "Alergias o intolerancias (afecciones) relevantes para ese paciente."
 * section[sectionAlergias].entry ^definition = "Enumera las alergias o intolerancias (afecciones) relevantes para ese paciente, describiendo el tipo de reacción (por ejemplo, erupción cutánea, anafilaxia,..); preferiblemente los agentes que la causan; y opcionalmente la criticidad y la certeza de la alergia.\r\nComo mínimo, debe enumerar las alergias y reacciones adversas actualmente activas y cualquier historial relevante.\r\nEsta entrada se utilizará para documentar que no se dispone de información sobre alergias, o que no se conocen alergias"
-* section[sectionAlergias].entry contains alergias 1..* MS
 * section[sectionAlergias].entry[alergias] only Reference(AlergiasEmbCL)
 
 * section[sectionProblemas] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -161,9 +128,9 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionProblemas].entry ^slicing.rules = #open
 * section[sectionProblemas].entry ^short = "Problemas o afecciones clínicas que se están controlando actualmente en el paciente."
 * section[sectionProblemas].entry ^definition = "Enumera y describe los problemas o afecciones clínicas que se están controlando actualmente en el paciente.  Esta entrada se utilizará para documentar que no se dispone de información sobre problemas o que no se conocen problemas relevantes."
-* section[sectionProblemas].entry contains problema 1..* MS
 * section[sectionProblemas].entry[problema] only Reference(CondicionSaludCL)
 
+* section[sectionProcedimientos] 1..1
 * section[sectionProcedimientos] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionProcedimientos] ^extension[=].valueString = "Sección"
 * section[sectionProcedimientos] ^short = "Historial de Procedimientos"
@@ -177,7 +144,6 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionProcedimientos].entry ^slicing.rules = #open
 * section[sectionProcedimientos].entry ^short = "Procedimientos anteriores del paciente pertinentes para el ámbito de este documento."
 * section[sectionProcedimientos].entry ^definition = "Enumera los procedimientos anteriores del paciente que son pertinentes para el ámbito de este documento. Procedimiento diagnóstico invasivo: por ejemplo, cateterismo cardíaco (los resultados de este procedimiento se documentan en la sección de resultados). Procedimiento terapéutico: p. ej. diálisis;\r\n3. Procedimiento quirúrgico: por ejemplo, apendicectomía. Esta entrada se utilizará para documentar que no se dispone de información sobre procedimientos anteriores, o que no se conocen procedimientos anteriores relevantes."
-* section[sectionProcedimientos].entry contains procedimiento 1..* MS
 * section[sectionProcedimientos].entry[procedimiento] only Reference(ProcedimientosEmbCL)
 
 * section[sectionHistoricoHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -193,7 +159,6 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionHistoricoHx].entry ^slicing.rules = #open
 * section[sectionHistoricoHx].entry ^short = "Condiciones sufridas por el paciente en el pasado"
 * section[sectionHistoricoHx].entry ^definition = "Contiene una descripción de las afecciones que sufrió el paciente en el pasado."
-* section[sectionHistoricoHx].entry contains pastProblem 1..*
 * section[sectionHistoricoHx].entry[pastProblem] only Reference(CondicionSaludCL)
 
 * section[sectionHistoriaSocial] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -209,11 +174,11 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionHistoriaSocial].entry ^short = "Aspectos relacionados con salud \"factores de estilo de vida\" u \"observaciones asociadas a estilos de vida\" (e.j. Hábitos de fumar; consumo de alcohol; dietas, hábitos de riesgo.)"
 * section[sectionHistoriaSocial].entry ^definition = "Descripción de los «factores de estilo de vida» relacionados con la salud de la persona\" u \"observaciones asociadas a estilos de vida\" (e.j. Hábitos de fumar; consumo de alcohol; dietas, hábitos de riesgo.)"
 * section[sectionHistoriaSocial].entry contains
-    DrogasDurasyBlandas 0..1 and
-    alcohol 0..1
+    DrogasDurasyBlandas 0..1
 * section[sectionHistoriaSocial].entry[DrogasDurasyBlandas] only Reference(ConsumoDrogasDurasyBlandasEmbCL)
 * section[sectionHistoriaSocial].entry[alcohol] only Reference(ConsumoAlcoholEmbCL)
 
+* section[sectionEmbarazoHx] 1..1
 * section[sectionEmbarazoHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionEmbarazoHx] ^extension[=].valueString = "Sección"
 * section[sectionEmbarazoHx] ^short = "Historial de Embarazos"
@@ -226,8 +191,5 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionEmbarazoHx].entry ^slicing.rules = #open
 * section[sectionEmbarazoHx].entry ^short = "Estado actual del embarazo y, opcionalmente, información sobre el resultado de embarazos anteriores."
 * section[sectionEmbarazoHx].entry ^definition = "Contiene información sobre si la paciente está embarazada o no.\r\nPuede contener además información resumida sobre el resultado de embarazos anteriores."
-* section[sectionEmbarazoHx].entry contains
-    statusEmbarazo 0..* and
-    resultadoEmbarazo 0..*
 * section[sectionEmbarazoHx].entry[statusEmbarazo] only Reference(EstadoEmbarazoCL)
 * section[sectionEmbarazoHx].entry[resultadoEmbarazo] only Reference(ResultadosEmbarazosCL)

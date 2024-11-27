@@ -1,5 +1,5 @@
 Profile: BundleDocumentoEmbCL
-Parent: Bundle
+Parent: BundleDocumentoIPSCl
 Id: BundleEmb-documento-ips-cl
 Title: "Bundle Resumen Clínico Embarazos"
 Description: """
@@ -15,47 +15,8 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clembarazos/ImplementationGuide/hl7.fhir.cl.clembarazos"
 
-* identifier 1..1 MS
-  * ^short = "Identificador persistente para el documento"
-
-* type 1..1 MS
-  * ^short = "Tipo de Bundle. En este caso es un documento"
-* type = #document
-
-* timestamp 1..1 MS
-  * ^short = "Fecha y hora de la creación del documento"
-
-* entry 1..* MS
+* entry 2..* MS
   * ^short = "Entradas del documento"
-  * fullUrl 1.. MS
-    * ^short = "URI para el recurso"
-  * search 0..0
-  * request 0..0 
-  * response 0..0
-* entry ^slicing.discriminator[0].type = #type
-* entry ^slicing.discriminator[=].path = "resource"
-* entry ^slicing.discriminator[+].type = #profile
-* entry ^slicing.discriminator[=].path = "resource"
-* entry ^slicing.rules = #open
-* entry ^slicing.description = "Identificador de tipo de documento"
-* entry ^slicing.ordered = false
-
-* entry contains
-  composition 1..1 and
-  patient 1..1 and
-  allergyintolerance 0..* and
-  condition 0..* and
-  medication 0..* and
-  medicationstatement 0..* and
-  practitioner 0..* and
-  practitionerrole 0..* and
-  procedimientos 0..* and
-  organization 0..* and
-  observation-pregnancy-edd 0..* and
-  observation-pregnancy-outcome 0..* and
-  observation-pregnancy-status 0..* and
-  observation-alcohol-use 0..* and
-  observation-tobacco-use 0..*
 
 * entry[composition]
   * resource 1..1
