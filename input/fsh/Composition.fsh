@@ -23,7 +23,7 @@ Alias: $Flag-alert-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-
 Profile: CompositionEmbCL
 Parent: DocumentoClIps
 Id: CompositionEmb-cl-ips
-Title: "Documento - Composition (Embarazo-CL)"
+Title: "Documento - CompositionComposition (Embarazo-CL)"
 Description: """Documento clínico utilizado para representar el conjunto de datos del Resumen de Pacientes Embarazadas a nivel nacional a partir del Resumen Internacional de Paciente (IPS) - Chile.
 Un documento de Resumen de Datos Clínicos de Pacientes Embarazadas es un extracto de historia clínica electrónica que contiene información sanitaria esencial sobre la paciente y su estado actual.
 El conjunto de datos es mínimo y no exhaustivo; independiente de la especialidad y la afección; pero sigue siendo clínicamente relevante. Está diseñado para apoyar el caso de uso de la «atención transfronteriza no planificada», pero no se limita a él. Este pretende ser utilizado para su aplicación global más allá de una región o país concretos, ya sea para una paciente embarazada que llega al país o para una paciente que sale del país o región particular.
