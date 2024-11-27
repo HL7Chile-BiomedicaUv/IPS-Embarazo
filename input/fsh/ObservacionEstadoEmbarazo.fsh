@@ -19,3 +19,5 @@ Description: "Perfil de estado del embarazo basado en la IPS chilena. Este perfi
 * valueCodeableConcept from PregnancyStatusUvIps (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 
+* extension contains SignosYSintomasPaciente named SignosYSintomasPaciente 0..* MS
+* extension[SignosYSintomasPaciente] ^short = "Signos y/o Síntomas de la paciente de acuerdo a su estado."

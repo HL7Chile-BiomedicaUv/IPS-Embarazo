@@ -231,4 +231,3 @@ Este perfil se basa en el perfil ClinicalDocument."""
     resultadoEmbarazo 0..*
 * section[sectionEmbarazoHx].entry[statusEmbarazo] only Reference(EstadoEmbarazoCL)
 * section[sectionEmbarazoHx].entry[resultadoEmbarazo] only Reference(ResultadosEmbarazosCL)
-//Y fecha de embarazo??

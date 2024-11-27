@@ -1,9 +1,9 @@
 Profile: BundleDocumentoEmbCL
 Parent: Bundle
 Id: BundleEmb-documento-ips-cl
-Title: "Bundle Resumen Clínico"
+Title: "Bundle Resumen Clínico Embarazos"
 Description: """
-Este perfil representa las restricciones aplicadas al recurso Bundle por la Guía de Implementación FHIR del Resumen Clínico de Pacientes Embarazadas, incluyendo restricciones locales de chile, para ser aplicado a nivel nacional.
+Este perfil representa las restricciones aplicadas al recurso Bundle por la Guía de Implementación FHIR del Resumen Clínico de Pacientes Embarazadas, incluyendo restricciones locales de Chile, para ser aplicado a nivel nacional.
 """
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
@@ -21,8 +21,10 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * type 1..1 MS
   * ^short = "Tipo de Bundle. En este caso es un documento"
 * type = #document
+
 * timestamp 1..1 MS
   * ^short = "Fecha y hora de la creación del documento"
+
 * entry 1..* MS
   * ^short = "Entradas del documento"
   * fullUrl 1.. MS
@@ -57,78 +59,78 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 
 * entry[composition]
   * resource 1..1
-    * ^short = "Composition del Resumén Internacional de Paciente versión adaptado a Chile"
-  * resource only Composition-cl-ips
+    * ^short = "Composition del Resumen de datos de Pacientes Embarazadas de acuerdo a la IPS chilena"
+  * resource only CompositionEmb-cl-ips
 
 * entry[patient]
   * resource 1..1
-    * ^short = "Información del Demografica del Paciente"
-  * resource only Paciente-cl-ips
+    * ^short = "Información Demográfica de la Paciente"
+  * resource only Paciente-embarazo-cl-ips
 
 * entry[allergyintolerance]
   * resource 1..  
-    * ^short = "Alergias del Paciente"
-  * resource only AllergiaInt-cl-ips
+    * ^short = "Alergias de la Paciente"
+  * resource only Alergias-embarazo-cl-ips
 
 * entry[condition]
   * resource 1..
-    * ^short = "Condiciones del Paciente"
-  * resource only Condition-cl-ips
+    * ^short = "Condiciones de salud de la Paciente"
+  * resource only Condicion-de-salud-cl-ips
 
 * entry[medication]
   * resource 1..
-    * ^short = "Medicamentos utilizados en registros o prescripciones para el Paciente"
-  * resource only Medicamento-cl-ips
+    * ^short = "Medicamentos utilizados en registros para la Paciente"
+  * resource only Medicamento-embarazos-cl-ips
 
 * entry[medicationstatement]
   * resource 1..
-    * ^short = "Historial de Medicamentos del Paciente"
-  * resource only RegMedicamentos-cl-ips
+    * ^short = "Historial de Medicamentos de la Paciente"
+  * resource only Uso-de-medicamentos-cl-ips
 
 * entry[practitioner]
   * resource 1..
     * ^short = "Profesionales de la Salud"
-  * resource only Prestador-cl-ips
+  * resource only Prestador-embarazo-cl-ips
 
 * entry[practitionerrole]
   * resource 1..
     * ^short = "Roles de los Profesionales de la Salud"
-  * resource only RolPrestador-cl-ips
+  * resource only RolPrestador-embarazo-cl-ips
 
 * entry[procedimientos]
   * resource 1..
-    * ^short = "Histotial de procedimientos realizados al paciente"
-  * resource only Procedimientos-cl-ips
+    * ^short = "Historial de procedimientos realizados a la paciente"
+  * resource only Procedimientos-embarazo-cl-ips
 
 * entry[organization]
   * resource 1..
     * ^short = "Organizaciones de la Salud"
-  * resource only Organizacion-cl-ips
+  * resource only Organizacion-embarazo-cl-ips
 
 * entry[observation-pregnancy-edd]
   * resource 1..
     * ^short = "Observaciones sobre la fecha estimada de parto"
-  * resource only Observation-embarazo-fecha-estimada-de-parto-cl-ips
+  * resource only Fecha-estimada-de-parto-cl-ips
 
 * entry[observation-pregnancy-outcome]
   * resource 1..
-    * ^short = "Observaciones sobre resultados del embarazo"
-  * resource only Observation-resultado-del-embarazo-cl-ips
+    * ^short = "Observaciones sobre resultados/antecedentes del embarazo"
+  * resource only Resultados-de-embarazos-cl-ips
 
 * entry[observation-pregnancy-status]
   * resource 1..
     * ^short = "Observaciones sobre el estado del embarazo"
-  * resource only Observation-estado-del-embarazo-cl-ips
+  * resource only Estado-del-embarazo-cl-ips
 
 * entry[observation-alcohol-use]
   * resource 1..
     * ^short = "Observaciones sobre el consumo de alcohol"
-  * resource only Observation-uso-de-alcohol-cl-ips
+  * resource only Consumo-alcohol-cl-ips
 
 * entry[observation-tobacco-use]
   * resource 1..
-    * ^short = "Observaciones sobre el consumo de tabaco"
-  * resource only Observation-uso-de-tabaco-cl-ips
+    * ^short = "Observaciones sobre el consumo de drogas duras y/o blandas"
+  * resource only Consumo-drogas-duras-y-blandas-cl-ips
 
 
 

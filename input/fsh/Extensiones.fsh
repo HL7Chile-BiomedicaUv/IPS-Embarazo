@@ -126,3 +126,21 @@ Context: Procedure
 * . ^definition = "Proporciona si es que la paciente quedó con alguna condición del post-parto anterior."
 * value[x] only string
 * value[x] MS
+
+Extension: SignosYSintomasPaciente
+Id: SignosYSintomasPaciente
+Title: "Signos y/o Síntomas de la paciente."
+Description: "Signos y/o Síntomas asociados al estado de embarazo en el que se encuentra la paciente."
+Context: Observation
+
+* ^version = "0.1.0"
+* ^publisher = "HL7 Chile"
+* ^status = #draft
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* . ^short = "Signos y/o Síntomas"
+* . ^definition = "Permite escribir Signos y/o Síntomas asociados al estado de embarazo en el que se encuentra la paciente."
+* value[x] only string
+* value[x] MS
