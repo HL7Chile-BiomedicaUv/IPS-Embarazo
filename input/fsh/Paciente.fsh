@@ -14,8 +14,8 @@ Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * identifier 1..* MS //EL paciente puede tener más de un identificador; suele ser el RUN nacional
-* identifier.system 1..1 MS
-* identifier.value 1..1 MS
+* identifier.system 0..1 MS
+* identifier.value 0..1 MS
 * identifier.use 1..1 MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"

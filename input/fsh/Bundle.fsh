@@ -1,7 +1,7 @@
 Profile: BundleDocumentoEmbCL
 Parent: BundleDocumentoIPSCl
 Id: BundleEmb-documento-ips-cl
-Title: "Bundle resumen Clínico Embarazos"
+Title: "Bundle Resumen Clínico Embarazos"
 Description: """
 Este perfil representa las restricciones aplicadas al recurso Bundle por la Guía de Implementación FHIR del Resumen Clínico de Pacientes Embarazadas, incluyendo restricciones locales de Chile, para ser aplicado a nivel nacional.
 """
