@@ -20,9 +20,9 @@ Description: "Perfil de antecedentes sobre tipos de partos basado en la IPS chil
 
 * effectiveDateTime 1..1 //Representa el momento o período clínico relevante (cuándo ocurrió el evento o medición clínica), por ejemplo, la medicion de la presion arterial se realizo en tal fecha, o la toma de una prueba se realizo entre tal y tal fecha
 
-* valueDateTime 1..1 MS //utilizado para especificar un instante de tiempo; fecha del dato
-* valueDateTime only dateTime
-* valueDateTime ^sliceName = "valueDateTime"
+* valueInteger 1..1 MS
+* valueInteger only integer
+* valueInteger ^sliceName = "valueInteger"
 
 * note 0..* 
 * note ^short = "Información adicional en caso de que el tipo de parto así lo requiera."

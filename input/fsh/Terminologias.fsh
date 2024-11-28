@@ -1,5 +1,6 @@
 Alias: CSEspecialidadesDeis = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSEspecialidadesDeisCL
 Alias: CSEspecialidadesConacem = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/EspecialidadesConacemConaceoCS
+Alias: VSSmokingStatus = http://hl7.org/fhir/uv/ips/ValueSet/current-smoking-status-uv-ips
 
 ValueSet: VSRolProfesional
 Id: VSRolProfesionalIPS
@@ -65,41 +66,6 @@ Description: "Códigos sobre la especialidad del profesional definidos en Snomed
 * CSEspecialidadesConacem#24 "Ginecología Oncológica"
 * CSEspecialidadesConacem#39 "Medicina Materno Fetal"
 * CSEspecialidadesConacem#42 "Medicina Reproductiva"
-
-CodeSystem: CSFechaUltimaRegla
-Id: CSFechaUltimaRegla
-Title: "Códigos de Fecha de última regla (FUR)."
-Description: "Códigos sobre la  Fecha de última regla (FUR)."
-
-* ^experimental = false
-* ^caseSensitive = true
-* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
-* ^status = #active
-* ^date = "2024-10-20T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* #FUR_OP "FUR Operacional"
-* #FUR_GES "FUR Gestante"
-
-ValueSet: VSFechaUltimaRegla
-Id: VSFechaUltimaReglaIPS
-Title: "Fecha última regla - FUR"
-Description: "Códigos sobre fecha de última regla de la paciente de Snomed-CT."
-
-* ^experimental = false
-* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
-* ^status = #active
-* ^date = "2024-10-20T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-//* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
-
-* codes from system CSFechaUltimaRegla
 
 ValueSet: VSPartos
 Id: VSPartosIPS
@@ -200,16 +166,9 @@ Description: "Códigos sobre el consumo de drogas duras y blandas provenientes d
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
+* include codes from valueset VSSmokingStatus
 * include codes from system CSOtrosDatos
 
-* SNOMED_CT_INT#449868002 "Smokes tobacco daily (finding)"
-* SNOMED_CT_INT#428041000124106 "Occasional tobacco smoker (finding)"
-* SNOMED_CT_INT#8517006 "Ex-smoker (finding)"
-* SNOMED_CT_INT#266919005 "Never smoked tobacco (finding)"
-* SNOMED_CT_INT#77176002 "Smoker (finding)"
-* SNOMED_CT_INT#266927001 "Tobacco smoking consumption unknown (finding)"
-* SNOMED_CT_INT#230063004 "Heavy cigarette smoker (finding)"
-* SNOMED_CT_INT#230060001 "Light cigarette smoker (finding)"
 * SNOMED_CT_INT#228377000 "Smokes drugs (finding)"
 * SNOMED_CT_INT#307052004 "Illicit drug use (finding)"
 * SNOMED_CT_INT#44870007 "Misused drugs in past (finding)"
@@ -285,20 +244,20 @@ Description: "Códigos sobre si la paciente no presenta el antecedente o resulta
 * #NE "No especifica"
 * #OT "Otro"
 
-ValueSet: VSOtrosDatos
-Id: VSOtrosDatos
-Title: "Datos de No presenta, No especifica u otro"
-Description: "Códigos provenientes del CodeSystem creado respecto a si la paciente no presenta el antecedente o resultados, si no se especifica u otro."
+//ValueSet: VSOtrosDatos
+//Id: VSOtrosDatos
+//Title: "Datos de No presenta, No especifica u otro"
+//Description: "Códigos provenientes del CodeSystem creado respecto a si la paciente no presenta el antecedente o resultados, si no se especifica u otro."
 
-* ^experimental = false
-* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
-* ^status = #active
-* ^date = "2024-10-20T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+//* ^experimental = false
+//* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+//* ^status = #active
+//* ^date = "2024-10-20T00:00:00-03:00"
+//* ^contact.name = "HL7 Chile"
+//* ^contact.telecom.system = #email
+//* ^contact.telecom.value = "chair@hl7chile.cl"
+//* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 //* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
-* codes from system CSOtrosDatos
+//* codes from system CSOtrosDatos
 
