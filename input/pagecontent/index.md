@@ -15,13 +15,10 @@ La incorporación de la guía IPS nacional en la adaptación del caso de uso de 
 Esta guía de implementación se estructura de acuerdo al menú que se encuentra en la parte superior como *barra de menú* de la siguiente manera:
 
 * [Inicio](index.html)
-* [Objetivos]()
-* [Casos de Uso]()
-* [Generalidades]() //ver
+* [Objetivos](Objetivos.html)
+* [Casos de Uso](Casos-de-uso.html)
 * [Artefactos](artifacts.html)
-
-
-{% include globals-table.xhtml %}
+* [Historial de Cambios](Changes.html)
 
 ### Dependencias
 
