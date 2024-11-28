@@ -48,13 +48,15 @@ dependencies:
 pages:
   index.md:
     title: Resumen Clínico de Pacientes Embarazadas Chile
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
   artifacts.html:
     title: Artefactos Generados
+  Objetivos.md:
+    title: Objetivos
+  Casos-de-uso.md:
+    title: Casos de Uso
+  Changes.md:
+    title: Historial de Cambios
+  
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -81,6 +83,9 @@ pages:
 menu:
   Inicio: index.html
   Artefactos: artifacts.html
+  Objetivos: Objetivos.html
+  Casos-de-Uso: Casos-de-uso.html
+  Historial-de-cambios: Changes.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
