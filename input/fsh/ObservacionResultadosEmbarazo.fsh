@@ -26,11 +26,6 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 * valueQuantity 1..1 MS
 * valueQuantity only Quantity
 * valueQuantity ^sliceName = "valueQuantity"
-//VER ANTECEDENTES DE PARTO
-* code.extension contains AntecedentesDePartos named AntecedentesDePartos 0..* MS
-* code.extension[AntecedentesDePartos] ^short = "Antecedente relacionado al tipo de parto"
-* code.extension[AntecedentesDePartos].value[x] from VSPartos (preferred)
-* code.extension[AntecedentesDePartos].value[x] ^binding.description = "Es usado para especificar antecedentes respecto al o los tipos de parto que ha tenido la paciente."
 
 //* extension contains NumeroDePartos named NumeroDePartos 1..1 MS
 //* extension[NumeroDePartos] ^short = "Número de partos que ha tenido la paciente"

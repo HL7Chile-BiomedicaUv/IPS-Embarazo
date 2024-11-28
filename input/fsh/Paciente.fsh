@@ -19,7 +19,7 @@ Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe
 * identifier.use 1..1 MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
+* identifier ^slicing.rules = #closed
 * identifier ^slicing.description = "Slicing para determinar otros tipos de identificadores como pasaporte, n° de ficha clínica, etc."
 * identifier ^slicing.ordered = false
 
@@ -35,16 +35,18 @@ Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe
 * identifier[OtrosIdentificadores].value ^short = "Valor del otro identificador del paciente"
   * ^short = "Otro Tipo de Identificador"
 
-* name 1..1 MS
+//* name 1..* MS
 //* name obeys ips-pat
 * name ^requirements = "Debe siempre existir un nombre sobre el cual se pueda requerir información del paciente"
 * name.text MS
 * name.text ^definition = "En caso de no poderse describir adecuadamente el nombre se puede escribir en este campo de texto como lo interpreta el registrador"
 * name.text ^min = 0
-* name.family 0..1 MS
-* name.given 1..* MS
+//* name.family 0..1 MS
+//* name.given 1..* MS
 * name.given ^min = 1
+* name[NombreOficial] 1..1 MS
 * name[NombreOficial].given 1..*
+* name[NombreOficial].family 1..1 MS
 
 * birthDate 1..1 MS
 

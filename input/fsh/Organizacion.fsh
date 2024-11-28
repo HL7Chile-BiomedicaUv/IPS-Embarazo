@@ -11,6 +11,6 @@ Description: "Perfil de la organización basado en la IPS chilena. Este perfil r
 * name 1..1 MS
 
 * telecom 1..* MS
-* telecom.system 1..1
-* telecom.value 1..1
+* telecom.system 1..1 MS
+* telecom.value 1..1 MS
 

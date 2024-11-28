@@ -20,15 +20,16 @@ Description: "Perfil de la fecha estimada de parto basado en la IPS chilena. Est
 * code ^binding.extension.valueString = "Códigos de fecha estimada de parto"
 * code ^binding.description = "Representa los códigos para la fecha estimada de parto."
 
-//HACER PERFIL PARA FECHA DE ULTUMA REGLA
-* code.extension contains FechaUltimaRegla named FechaUltimaRegla 0..1 MS
-* code.extension[FechaUltimaRegla] ^short = "Fecha de última regla de la paciente"
-* code.extension[FechaUltimaRegla].value[x] from VSFechaUltimaRegla (preferred)
-* code.extension[FechaUltimaRegla].value[x] ^binding.description = "Es usado para especificar la fecha de última regla de la paciente para calcular las semanas de gestación."
+//HACER PERFIL PARA FECHA DE ULTUMA REGLA (ahora no)
+//Es usado para especificar la fecha de última regla de la paciente para calcular las semanas de gestación."
+//se modifico performer
 
 * subject 1..1 MS
 * subject only Reference(PacienteEmbCL)
 
-* valueDateTime 1..1 MS
+* performer 1..1 MS
+* performer only Reference(PacienteEmbCL or PrestadorEmbCL or RolPrestadorEmbCL) //se restringe solo a estos dado que la fecha de ultima regla o menstruacion (FUR) puede ser mas o menos precisa dependiendo de quien haga la anotación clínica (paciente o medico), y suele ser la FUR operacional (por el medico) la mas preferida para el manejo clinico para estimar la fecha de parto
+
+* valueDateTime 1..1 MS //utilizado para especificar un instante de tiempo; fecha del dato
 * valueDateTime only dateTime
 * valueDateTime ^sliceName = "valueDateTime"
