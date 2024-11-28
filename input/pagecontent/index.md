@@ -12,13 +12,15 @@ La incorporación de la guía IPS nacional en la adaptación del caso de uso de 
 
 ### Contenido de la guía
 
-Esta guía de implementación se estructura de acuerdo al menú que se encuentra en la parte superior como *barra de menú* de la siguiente manera:
+Esta guía de implementación se estructura de la siguiente manera, de acuerdo al menú que se encuentra en la parte superior como *barra de menú*:
 
-* [Inicio](index.html)
-* [Objetivos](Objetivos.html)
-* [Casos de Uso](Casos-de-uso.html)
-* [Artefactos](artifacts.html)
+* [Inicio](index.html): Página de inicio de la Guía de implementación.
+* [Objetivos](Objetivos.html): Provee de información general sobre los objetivos de esta guía.
+* [Casos de Uso](Casos-de-uso.html): Provee de información sobre los casos de uso, sus actores y las transacciones por caso de uso.
+* [Artefactos](artifacts.html): Página que contiene todos los artefactos de la guía. Estos son: Perfiles, Extensiones, ValueSets, CodeSystem y Ejemplos.
 * [Historial de Cambios](Changes.html)
+
+
 
 ### Dependencias
 
