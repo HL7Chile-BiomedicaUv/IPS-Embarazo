@@ -84,8 +84,8 @@ menu:
   Inicio: index.html
   Artefactos: artifacts.html
   Objetivos: Objetivos.html
-  Casos-de-Uso: Casos-de-uso.html
-  Historial-de-cambios: Changes.html
+  Casos de Uso: Casos-de-uso.html
+  Historial de cambios: Changes.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

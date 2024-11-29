@@ -4,11 +4,15 @@
 
 Esta versión es una guía para el resumen de datos clínicos de pacientes embarazadas. Busca ser un caso de uso específico de la guía de implementación de resumenes clínicos de pacientes a nivel nacional (IPS-CL, por sus siglas en inglés), tomando como referencia la misma guía [IPS-CL](https://build.fhir.org/ig/HL7Chile/IPS-CL/) y la guía [Cl Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/).
 
+### Contexto
+
+Un resumen de datos clínicos de pacientes embarazadas es un documento clínico que contiene la información más relevante del sujeto de atención, en este caso, información relacionada al estado del embarazo de la paciente, fecha estimada de parto, resultados o antecedentes de embarazos anteriores, además de condiciones de salud y otros datos escenciales para brindar una atención de calidad y con más enfocada en la propia paciente que en la lectura y documentación de datos clínicos.
+
 ### Descripción
 
-Para lograr una guía de resumen de embarazos, resulta necesario basarse en la guía de implementación IPS de Chile, la cual define perfiles específicos y adaptables de acuerdo al caso de uso a desarrollar. 
+Esta guía de implementación busca estandarizar el formato y la transmisión de los datos clínicos para su interoperabilidad. Para lograr esto, resulta necesario basarse en la guía de implementación IPS de Chile, la cual define perfiles específicos y adaptables de acuerdo al caso de uso a desarrollar. 
 
-La incorporación de la guía IPS nacional en la adaptación del caso de uso de resumen de embarazos, permite establecer perfiles FHIR específicos que representan la información clínica mínima necesaria que será interoperable y que permitirá la conformación de resumenes de pacientes embarazadas a nivel nacional.  
+La incorporación de la guía IPS nacional en la adaptación del caso de uso de resumen de embarazos, permite establecer perfiles FHIR específicos que representan la información clínica mínima necesaria para la conformación de resumenes de pacientes embarazadas a nivel nacional.  
 
 ### Contenido de la guía
 
@@ -20,7 +24,18 @@ Esta guía de implementación se estructura de la siguiente manera, de acuerdo a
 * [Artefactos](artifacts.html): Página que contiene todos los artefactos de la guía. Estos son: Perfiles, Extensiones, ValueSets, CodeSystem y Ejemplos.
 * [Historial de Cambios](Changes.html)
 
+Esta estructura está diseñada para facilitar la navegación a través de los diversos componentes de la guía de implementación además de mejorar su comprensión.
 
+### Aspectos Generales de esta Guía
+
+A continuación, se describe el proceso general de la IPS-CL. Este es un proceso general de solicitud de un resumen clínico y cómo actua el servidor ante la solicitud para permitir la generación del documento.
+
+<br>
+<div align="center">
+  <img src="Proceso.png" style="width:70%"> 
+  <p>Proceso de solicitud de resumen</p>
+</div>
+<br>
 
 ### Dependencias
 
