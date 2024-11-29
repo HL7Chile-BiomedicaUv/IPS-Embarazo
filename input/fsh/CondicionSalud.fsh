@@ -16,7 +16,7 @@ Description: "Perfil del uso de medicamentos basado en la IPS chilena. Este perf
 
 * code 1..1 MS
 * code only CodeableConceptIPS
-* code from VSPatologias
+* code from VSPatologias (preferred)
   * ^binding.description = "Código para una condición clínica (o problema ausente/desconocido) proveniente de SNOMED CT."
 
 //SE ELIMINO LA EXTENSION CONDICIONPOSTPARTO DADO QUE SE TIENE NOTE

@@ -54,8 +54,8 @@ Description: "Códigos sobre la especialidad del profesional definidos en Snomed
 * ^contact.telecom.value = "chair@hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* include codes from system CSEspecialidadesDeis
-* include codes from system CSEspecialidadesConacem
+//* include codes from system CSEspecialidadesDeis
+//* include codes from system CSEspecialidadesConacem
 
 * CSEspecialidadesDeis#22 "Ginecología Pediátrica y de la Adolescencia"
 * CSEspecialidadesDeis#28 "Medicina Familiar"

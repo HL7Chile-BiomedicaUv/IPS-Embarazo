@@ -43,7 +43,7 @@ Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe
 * name.text ^min = 0
 //* name.family 0..1 MS
 //* name.given 1..* MS
-* name.given ^min = 1
+//* name.given ^min = 1
 * name[NombreOficial] 1..1 MS
 * name[NombreOficial].given 1..*
 * name[NombreOficial].family 1..1 MS

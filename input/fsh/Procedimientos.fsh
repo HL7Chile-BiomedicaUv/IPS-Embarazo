@@ -22,7 +22,7 @@ Description: "Perfil de antecedentes quirúrgicos basado en la IPS chilena. Este
 * performed[x] only dateTime or Period
 * asserter only Reference(PacienteEmbCL or RelatedPerson or PrestadorEmbCL or CoreRolClinicoCl)
 * performer
-  * actor only Reference(PacienteEmbCL or RelatedPerson or  DispositivoObservadorClIps or PrestadorEmbCL or RolPrestadorEmbCL or OrganizacionEmbCL)
+  * actor only Reference(PacienteEmbCL or RelatedPerson or PrestadorEmbCL or RolPrestadorEmbCL or OrganizacionEmbCL)
   * onBehalfOf only Reference(OrganizacionEmbCL)
 
 * note 0..*

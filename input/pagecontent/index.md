@@ -37,6 +37,16 @@ A continuación, se describe el proceso general de la Guía de Implementación. 
 </div>
 <br>
 
+El proceso abarca desde la solicitud del resumen clínico por parte del profesional de la salud, hasta la generación del resumen desde el repositorio para que este pueda ver visualizado por el profesional en el sistema local, revisando si es factible realizar un resumen.
+
+Antes de que el servidor envíe el resumen como un documento, se debe tener en cuenta lo siguiente:
+
+* Se debe verificar la existencia del paciente en el sistema, es decir, si es que presenta fichas clínicas para su identificación. Si el paciente no existe, se debe crear su ficha con sus datos.
+* Se deben considerar los datos del paciente contenidos en los recursos almacenados. El profesional de la salud puede crear recursos o bien, puede actualizar la información. 
+
+*Ejemplo (Actualizar):* La paciente, que ya tenía alergias, presenta una nueva alergia confirmada y diagnosticada y debe ser registrada en el sistema.
+*Ejemplo (Crear):* Una paciente sana presenta un problema de salud confirmado y diagnosticado, pero no se encuentra registrado, por lo que el profesional de la salud procede a crear el recurso Condition.
+
 ### Dependencias
 
 {% include dependency-table.xhtml %}
