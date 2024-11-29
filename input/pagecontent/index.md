@@ -28,7 +28,7 @@ Esta estructura está diseñada para facilitar la navegación a través de los d
 
 ### Aspectos Generales de esta Guía
 
-A continuación, se describe el proceso general de la IPS-CL. Este es un proceso general de solicitud de un resumen clínico y cómo actua el servidor ante la solicitud para permitir la generación del documento.
+A continuación, se describe el proceso general de la Guía de Implementación. Este es un proceso genérico sobre la solicitud del resumen clínico a partir de un sistema local y muestra cómo actua el servidor ante la solicitud para permitir la generación del documento. 
 
 <br>
 <div align="center">

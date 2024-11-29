@@ -48,12 +48,12 @@ dependencies:
 pages:
   index.md:
     title: Resumen Clínico de Pacientes Embarazadas Chile
-  artifacts.html:
-    title: Artefactos Generados
   Objetivos.md:
     title: Objetivos
   Casos-de-uso.md:
     title: Casos de Uso
+  artifacts.html:
+    title: Artefactos Generados
   Changes.md:
     title: Historial de Cambios
   
@@ -82,9 +82,9 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Inicio: index.html
-  Artefactos: artifacts.html
   Objetivos: Objetivos.html
   Casos de Uso: Casos-de-uso.html
+  Artefactos: artifacts.html
   Historial de cambios: Changes.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
