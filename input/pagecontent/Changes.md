@@ -37,7 +37,7 @@
 
 - Perfil [Condición](StructureDefinition-Condicion-de-salud-cl-ips.html)
     - Se basa en el perfil Condición de IPS-CL.   
-    - Se modifica el ValueSet proveniente de IPS por uno acorde a las patologías que puede sufrir una embarazada, denominado VSPatologias.
+    - Se modifica el ValueSet proveniente de IPS por uno acorde a las patologías que puede sufrir una embarazada, denominado *Condición de Salud o patologías de la paciente*.
     - Se hace referencia al elemento *note* para que se pueda agregar información adicional sobre alguna condición e incluso sobre la condición post-parto de la paciente.
     - Se habilitó el ejemplo:
         * [Condición de salud]()
@@ -51,7 +51,7 @@
 - Perfil [Hábitos Drogas](StructureDefinition-Consumo-drogas-duras-y-blandas-cl-ips.html)
     - Se basa en el perfil Consumo de Tabaco de IPS-CL.
     - Este perfil se modificó para representar el consumo de drogas blandas y duras.
-    - Se agregó un ValueSet con códigos relacionados al consumo de drogas blandas y duras.
+    - Se agregó un ValueSet con códigos relacionados al consumo de *Drogas duras y blandas*.
     - Se habilitó el ejemplo:
         * [Hábitos de consumo de drogas]()
 
@@ -77,6 +77,7 @@
     - Se basa en el perfil de Observación de Resultados de embarazos de IPS-CL. 
     - Se eliminó la extension fecha de antecedente, dado que existe effective[x].
     - Se debe modificar para agregar una extensión a la observación sobre *tipos de parto*, agregando invariant rules para ver si se puede aplicar el dato solo si se utilizan ciertos valores del ValueSet. (VER)
+    - Se debería agregar el ValueSet *Tipos de parto*.
     - Se habilitó el ejemplo:
         * [Observación Resultados de Embarazos]()
 
@@ -100,7 +101,7 @@
 
 - Perfil [Procedimientos](StructureDefinition-Procedimientos-embarazo-cl-ips.html)
     - Se basa en el perfil Procedimientos de IPS-CL.
-    - Se modificó el ValueSet agregando procedimientos que se realizó la paciente relacionados con el embarazo.
+    - Se modificó el ValueSet agregando *procedimientos quirúrgicos* que se realizó la paciente relacionados con el embarazo.
     - Se cambiaron las referencias de los elementos *asserter, performer.actor y performer.onBehalfOf*.
     - Se hace referencia al elemento *note* para que se pueda agregar información adicional sobre el procedimiento que se ha realizado la paciente.
     - Se habilitó el ejemplo:
@@ -108,24 +109,19 @@
 
 - Perfil [Rol Prestador](StructureDefinition-RolPrestador-embarazo-cl-ips.html)
     - Se basa en el perfil Rol de Prestador de IPS-CL.
-    - 
+    - Se modificaron los ValueSet de *Rol del profesional y Especialidad del profesional*.
+    - Se habilitó el ejemplo:
+        * [Rol Prestador]()
 
-- Perfil [Uso De Medicamentos]()
+- Perfil [Uso De Medicamentos](StructureDefinition-Uso-de-medicamentos-cl-ips.html)
+    - Se basa en el perfil Declaración de Medicación de IPS-CL.
+    - Se cambiaron las referencias de los perfiles
+    - Se habilitó el ejemplo:
+        * [Uso De Medicamentos]()
 
-Además, se agregaron los siguientes artefactos:
-    - Terminologías:
-    - ValueSets:
-        - [VSRolProfesional](ValueSet-VSRolProfesionalIPS.html)
-            - 
-        - [VSEspecialidadesEmb]()
-            -
-        - [VSPartos]()
-        - [VSPatologias]()
-        - [VSDrogasBlandasYDuras]()
-        - [VSUCUM]()
-        - [VSProcedimientos]()
+- Además, se agregaron los siguientes artefactos:
     - CodeSystem:
-        - [CSOtrosDatos]()
+        - [CSOtrosDatos](CodeSystem-CSOtrosDatos.html)
     - Extensiones:
-        - [Edad]()
+        - [Edad](StructureDefinition-Edad.html)
         - [Tipos de Partos]()
