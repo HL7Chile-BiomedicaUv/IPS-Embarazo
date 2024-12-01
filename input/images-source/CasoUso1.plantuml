@@ -1,11 +1,10 @@
 @startuml
 
 group Summary Solicitud de Resumen
-Sistema Local -> Repositorio IPS : $Summary
+Sistema -> Repositorio_IPS : $Summary
 activate Respositorio IPS
-Repositorio IPS -> Repositorio IPS : Verifica factibilidad del resumen
-Repositorio IPs -> Sistema Local : Emite un Bundle Document o un aviso
- 
+Repositorio_IPS -> Repositorio_IPS : Verifica factibilidad del resumen
+Repositorio_IPS -> Sistema : Emite un Bundle Document o un aviso
 end
 
 @enduml
