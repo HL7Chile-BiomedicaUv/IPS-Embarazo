@@ -4,7 +4,7 @@
 
 <br>
 <div align="center">
-  <img src="CasoUso1.svg" style="width:70%"> 
+  <img src="CasoUso1.png" style="width:70%"> 
   <p>Caso de Uso 1</p>
 </div>
 <br clear="all"/>
