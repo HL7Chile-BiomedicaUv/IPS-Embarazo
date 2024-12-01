@@ -2,8 +2,9 @@
 
 ### Caso de Uso 1: Solicitud del Resumen de Paciente
 
-<div align="center" >
-  {% include imagesCU/CasoUso1.svg %}
+<br>
+<div align="center">
+  <img src="CasoUso1.svg" style="width:70%"> 
+  <p>Caso de Uso 1</p>
 </div>
 <br clear="all"/>
-
