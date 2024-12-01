@@ -4,7 +4,7 @@ group Summary Solicitud de Resumen
 Sistema -> Repositorio_IPS : $Summary
 activate Respositorio_IPS
 Repositorio_IPS -> Repositorio_IPS : Verifica factibilidad del resumen
-Repositorio_IPS -> Sistema : Emite un Bundle Document o un aviso
+return : Emite un Bundle Document o un aviso
 end
 
 @enduml
