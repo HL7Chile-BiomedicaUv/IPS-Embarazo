@@ -18,7 +18,6 @@ Description: "Ejemplo de paciente según la guía de implementación de resumen 
 * identifier[RUN].type.extension.valueCodeableConcept.coding.display = "Chile"
 
 // Definir el sistema y valor del identificador
-* identifier[RUN].system = #system
 * identifier[RUN].system = "http://regcivil.cl/Validacion/RUN"
 * identifier[RUN].value = "14.241.432-8" //38 años app
 

@@ -17,7 +17,7 @@ Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe
 * identifier.system 0..1 MS
 * identifier.value 0..1 MS
 * identifier.use 1..1 MS
-* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.type = #exists
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #closed
 * identifier ^slicing.description = "Slicing para determinar otros tipos de identificadores como pasaporte, n° de ficha clínica, etc."
