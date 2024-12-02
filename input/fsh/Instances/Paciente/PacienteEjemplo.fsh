@@ -27,7 +27,7 @@ Description: "Ejemplo de paciente según la guía de implementación de resumen 
 * name[NombreOficial].use = #official
 * name[NombreOficial].family = "Henriquez"
 //* name[NombreOficial].family.extension[segundoApellido] = SegundoApellidoPacienteCL
-* name[NombreOficial].given[0] = "Susan"
+* name[NombreOficial].given[0] = "Susana"
 * name[NombreOficial].given[+] = "Mercedes"
 //* name[NombreOficial].given[+] = ""
 
