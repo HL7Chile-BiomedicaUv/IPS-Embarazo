@@ -3,8 +3,6 @@ Alias: snomed = http://snomed.info/sct
 Alias: CSConsent = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: CSallergy = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: CSallergyver = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
-Alias: CSAtc = http://www.whocc.no/atc
-Alias: ucum = http://unitsofmeasure.org
 
 Instance:    Alergias-Emb-Ejemplo
 InstanceOf:  AlergiasEmbCL
@@ -26,7 +24,7 @@ Description: "Ejemplo sobre el padecimiento de una o más alergias por parte de 
 
 * code
   //* coding[0] = snomed#3829006 "Iron"
-  * coding = CSAtc#3829006 "Iron"
+  * coding = snomed#3829006 "Iron"
   * text = "Hierro"
 
 * patient = Reference(Paciente-Emb-Ejemplo) //Para quien es la prescripción de medicacion

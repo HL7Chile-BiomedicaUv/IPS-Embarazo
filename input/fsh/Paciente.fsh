@@ -25,18 +25,34 @@ Description: "Perfil de paciente basado en la IPS chilena. Este perfil restringe
 
 //Identificador RUN
 * identifier contains RUN 0..1 MS
+* identifier[RUN].system 1..1 MS
+* identifier[RUN].system only uri
 * identifier[RUN].system ^short = "Sistema donde está codificado el RUN"
+* identifier[RUN].system ^definition = "URI que identifica el sistema del cual se emite el RUN."
+//* identifier[RUN].system = "http://www.example.org/identifier/RUN"
+
+* identifier[RUN].value 1..1 MS
+* identifier[RUN].value only string
 * identifier[RUN].value ^short = "Número de RUN del paciente" //RUN
+* identifier[RUN].value ^definition = "Número de RUN, el cual es el Identificador nacional oficial en Chile."
+//* identifier[RUN].value = "12345678-0"
   * ^short = "RUN nacional como Identificador"
 
 //Identificador Otro
 * identifier contains OtrosIdentificadores 0..1 MS
+* identifier[OtrosIdentificadores].system 1..1 MS 
+* identifier[OtrosIdentificadores].system only uri
 * identifier[OtrosIdentificadores].system ^short = "Sistema donde está codificado el otro identificador"
-* identifier[OtrosIdentificadores].value ^short = "Valor del otro identificador del paciente"
+* identifier[OtrosIdentificadores].system ^definition = "URI que identifica el sistema del cual se emite el otro identificador."
+//* identifier[OtrosIdentificadores].system = "http://www.example.org/identifier/other"
+
+* identifier[OtrosIdentificadores].value 1..1 MS
+* identifier[OtrosIdentificadores].value only string
+* identifier[OtrosIdentificadores].value ^short = "Número del identificador del paciente" //RUN
+* identifier[OtrosIdentificadores].value ^definition = "Identificador alternativo, como pasaporte u otro documento oficial."
+//* identifier[OtrosIdentificadores].value = "AB1234567"
   * ^short = "Otro Tipo de Identificador"
 
-//* name 1..* MS
-//* name obeys ips-pat
 * name ^requirements = "Debe siempre existir un nombre sobre el cual se pueda requerir información del paciente"
 * name.text MS
 * name.text ^definition = "En caso de no poderse describir adecuadamente el nombre se puede escribir en este campo de texto como lo interpreta el registrador"

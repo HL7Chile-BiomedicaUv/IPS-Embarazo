@@ -72,7 +72,7 @@ Description: "Ejemplo de paciente según la guía de implementación de resumen 
 // Extensión de región
 * address.state.extension[0].url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl"
 * address.state.extension[0].valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"
-* address.state.extension[0].valueCodeableConcept.coding.code = #13  // Código para Región Valparaiso
+* address.state.extension[0].valueCodeableConcept.coding.code = #05  // Código para Región Valparaiso
 * address.state.extension[0].valueCodeableConcept.coding.display = "Valparaíso"
 
 // País
