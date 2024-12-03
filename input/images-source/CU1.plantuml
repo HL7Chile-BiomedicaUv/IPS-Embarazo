@@ -1,4 +1,4 @@
-@startuml name
+@startuml
 
 group PUT Actualizar Recursos
 Sistema -> Repositorio_IPS : PUT Update Resources
