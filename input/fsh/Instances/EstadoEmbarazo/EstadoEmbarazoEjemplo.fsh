@@ -24,6 +24,6 @@ Description: "Ejemplo de una observación realizada sobre el estado del embarazo
 * hasMember = Reference(FechaEstimadaParto-Ejemplo)
 
 * note.text = """
-### Nota:
+### NOTA:
 El estado de embarazo positivo se dió el día 03 de marzo del 2024.
 """

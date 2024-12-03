@@ -21,6 +21,6 @@ Description: "Ejemplo de una observación sobre la fecha estimada de parto de la
 * valueDateTime = "2024-11-26" //corresponde a la fecha estimada de parto segun el prestador
 
 * note.text = """
-### Se realizó una ecografía el día 05 de mayo (durante el primer trimestre) a la paciente para determinar la fecha de última regla de
+### NOTA: Se realizó una ecografía el día 05 de mayo (durante el primer trimestre) a la paciente para determinar la fecha de última regla de
 de manera más precisa (FUR Operacional). Por lo tanto, la fecha estimada de parto es en noviembre de este año.
 """

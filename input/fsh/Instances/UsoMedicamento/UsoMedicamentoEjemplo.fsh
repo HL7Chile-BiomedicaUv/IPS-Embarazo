@@ -31,6 +31,6 @@ Description: "Ejemplo sobre la declaración de uso de medicación de la paciente
   * text = "Vía de administración bucal"
 
 * note.text = """
-### Nota:
+### NOTA:
 Administrar una tableta por día a partir de las 20 semanas hasta el final de la gestación.
 """

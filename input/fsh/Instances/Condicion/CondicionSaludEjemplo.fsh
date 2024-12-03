@@ -32,6 +32,6 @@ Description: "Ejemplo de una condición que padece la paciente actualmente."
 * asserter = Reference(Prestador-Emb-Ejemplo)
 
 * note.text = """
-### Nota:
+### NOTA:
 La paciente durante su post parto anterior presentó hipertensión arterial, dada su condición de salud.
 """

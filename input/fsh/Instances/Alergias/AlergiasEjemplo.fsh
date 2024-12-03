@@ -42,7 +42,7 @@ Description: "Ejemplo sobre el padecimiento de una o más alergias por parte de 
     * text = "Anafilaxia"
 
 * note.text = """
-### Nota:
+### NOTA:
 El cuadro clínico que suele presentar la paciente ante la exposición a Hierro es **intenso picor en manos y cuero cabelludo.**
 Además, presenta **taquitardia y dificultad respiratoria.**
 """
