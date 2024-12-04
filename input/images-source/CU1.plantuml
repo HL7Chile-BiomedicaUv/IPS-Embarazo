@@ -1,10 +1,10 @@
 @startuml
 
-group PUT Actualizar Recursos
-Sistema -> Repositorio_IPS : PUT Update Resources
+group POST Solicitud de Resumen
+Sistema -> Repositorio_IPS : $Summary
 activate Repositorio_IPS
-Repositorio_IPS -> Repositorio_IPS : Validación
-Repositorio_IPS --> Sistema : Recursos actualizados
+Repositorio_IPS -> Repositorio_IPS : Verifica factibilidad del resumen
+Repositorio_IPS --> Sistema : Bundle Document o aviso
 deactivate Repositorio_IPS
 end
 
