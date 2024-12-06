@@ -23,7 +23,7 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 
 * code.extension contains TipoDePartos named TipoDePartos 0..* MS
 * code.extension[TipoDePartos] ^short = "Tipos de partos que ha tenido la paciente según los embarazos anteriores."
-* code obeys Emb-partos-resultados-Invariant-1
+* code.extension[TipoDePartos] obeys Emb-partos-resultados-Invariant-1
 
 //se eliminó la extension fecha de antecedente, dado que existe effective[x]
 * subject 1..1 MS
