@@ -1,7 +1,7 @@
 Alias: loinc = http://loinc.org
 Alias: snomed = http://snomed.info/sct
 Alias: ucum = http://unitsofmeasure.org
-Alias: TiposDePartos = 	https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos
+Alias: TiposDePartos = https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos
 
 Instance:    ResultadoEmbarazoEjemplo
 InstanceOf:  ResultadosEmbarazosCL
@@ -29,6 +29,6 @@ Description: "Ejemplo de una observación sobre un resumen de los resultados de 
 * performer = Reference(Prestador-Emb-Ejemplo)
 
 * valueQuantity.value = 1
-* valueQuantity.unit = "Aborto"
+* valueQuantity.unit = "hijo"
 * valueQuantity.system = ucum
 * valueQuantity.code = #1 //se refiere al numero de nacimientos totales segun el codigo de arriba
