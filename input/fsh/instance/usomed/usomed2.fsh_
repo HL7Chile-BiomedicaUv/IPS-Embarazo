@@ -1,0 +1,22 @@
+Alias: loinc = http://loinc.org
+Alias: snomed = http://snomed.info/sct
+Alias: CSConsent = http://terminology.hl7.org/CodeSystem/consentscope
+Alias: CSv3 = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: EDQM = http://standardterms.edqm.eu
+
+Instance:    Uso-Medicamento-Salbutamol
+InstanceOf:  RegMedicamentosClIps
+Usage:       #example
+Title:       "Uso de Medicamento - Salbutamol"
+Description: "Declaración de uso de Salbutamol por parte del paciente."
+
+* status = #active
+
+* medicationReference = Reference(Medicamento-Salbutamol)
+* medicationReference.display = "Salbutamol inhalador"
+
+* subject = Reference(Paciente)
+
+* effectiveDateTime = "2018-05-10"
+
+* dosage.text = "Se administra 100 mcg según necesidad"

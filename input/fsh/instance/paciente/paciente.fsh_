@@ -1,0 +1,35 @@
+Alias: $SegundoApellidoPacienteCL = https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/SegundoApellido
+
+Instance:    Paciente
+InstanceOf:  PacienteCLIps
+Usage:       #example
+Title:       "Paciente - IPS Chile"
+Description: "Paciente según el estándar IPS nacional"
+
+* identifier.use = #official    // Obligado
+* identifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI"
+* identifier.type.coding.code = #NNCHL
+* identifier.type.coding.display = "Chile"
+
+// Extensión para el País de Emisión del Documento
+* identifier.type.extension.url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises"
+* identifier.type.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"
+* identifier.type.extension.valueCodeableConcept.coding.code = #152
+* identifier.type.extension.valueCodeableConcept.coding.display = "Chile"
+
+// Definir el sistema y valor del identificador
+* identifier.system = "http://regcivil.cl/Validacion/RUN"
+* identifier.value = "12.345.678-9"
+
+
+* active = true //Registro activo
+
+* name[0].use = #official
+* name[=].family = "Gómez"
+* name[=].family.extension.url = $SegundoApellidoPacienteCL
+* name[=].family.extension.valueString = "Riquelme"
+* name[=].given[0] = "María"
+* name[=].given[+] = "Belén"
+
+* gender = #female
+* birthDate = "1985-07-25"

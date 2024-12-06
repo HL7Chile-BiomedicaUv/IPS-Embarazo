@@ -1,0 +1,20 @@
+Alias: loinc = http://loinc.org
+Alias: snomed = http://snomed.info/sct
+
+Instance:    Inmunizacion-vacuna
+InstanceOf:  InmunizacionClIps
+Usage:       #example
+Title:       "Inmunización - Vacuna contra influenza"
+Description: "Inmunización del paciente, el cual posee la vacuna contra la influenza."
+
+* language = #es
+
+* status = #completed
+
+* vaccineCode
+  * coding = snomed#836377006 "Vaccine product containing Influenza virus antigen (medicinal product)"
+  * text = "Vacuna contra la influenza"
+
+* patient = Reference(Paciente) //Para quien es la prescripción de medicacion
+
+* occurrenceDateTime = "2024-04-10"

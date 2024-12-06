@@ -1,0 +1,25 @@
+Alias: loinc = http://loinc.org
+Alias: snomed = http://snomed.info/sct
+
+Instance:    Uso-Medicamento-Metformina
+InstanceOf:  RegMedicamentosClIps
+Usage:       #example
+Title:       "Uso de Medicamento - Metformina"
+Description: "Declaración de uso de Metformina por parte del paciente."
+
+* status = #active
+
+* medicationReference = Reference(Medicamento-Metformina)
+* medicationReference.display = "Comprimido Metformina"
+
+* subject = Reference(Paciente)
+
+* effectiveDateTime = "2016-06-20"
+
+* dosage.text = "Se administra 850 mg/día"
+* dosage.timing.repeat.frequency = 1 //con que frecuencia ocurre el evento: el tratamiento es una vez
+* dosage.timing.repeat.period = 1 //con que frecuencia ocurre el evento: un día; seria una vez al día
+* dosage.timing.repeat.periodUnit = #d //unidad de medida de la frecuencia
+
+* dosage.doseAndRate.doseQuantity = 850 ucum#mg "mg" //cantidad de medicamento administrado
+

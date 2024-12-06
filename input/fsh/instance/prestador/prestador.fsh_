@@ -1,0 +1,16 @@
+Alias: CSTipoIdentificador = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador
+
+Instance:    Prestador-Medico
+InstanceOf:  PrestadorClIps
+Usage:       #example
+Title:       "Prestador - Médico Cirujano"
+Description: "Prestador de salud con mención en cirugía que atiende al paciente y solicita el resumen."
+
+//Nombre Prestador
+* name.use = #official
+* name.family = "Prado"
+* name.given = "Carlos"
+* name.given[1] = "Augusto"
+
+* qualification[EspecialidadMedica].identifier.value = "esp"
+* qualification[EspecialidadMedica].code.text = "Cirugía General"

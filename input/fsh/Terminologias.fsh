@@ -244,20 +244,25 @@ Description: "Códigos sobre si la paciente no presenta el antecedente o resulta
 * #NE "No especifica"
 * #OT "Otro"
 
-//ValueSet: VSOtrosDatos
-//Id: VSOtrosDatos
-//Title: "Datos de No presenta, No especifica u otro"
-//Description: "Códigos provenientes del CodeSystem creado respecto a si la paciente no presenta el antecedente o resultados, si no se especifica u otro."
+ValueSet: VSTipoParto
+Id: VSTipoParto
+Title: "Value Set sobre los tipos de parto de la paciente"
+Description: "Códigos provenientes del CodeSystem creado respecto a si la paciente no presenta el antecedente o resultados, si no se especifica u otro."
 
-//* ^experimental = false
-//* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
-//* ^status = #active
-//* ^date = "2024-10-20T00:00:00-03:00"
-//* ^contact.name = "HL7 Chile"
-//* ^contact.telecom.system = #email
-//* ^contact.telecom.value = "chair@hl7chile.cl"
-//* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-//* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
+* ^experimental = false
+* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+* ^status = #active
+* ^date = "2024-10-20T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
-//* codes from system CSOtrosDatos
-
+* SNOMED_CT_INT#48782003 "Delivery normal"
+//* SNOMED_CT_INT#282020008 "Premature delivery"
+* SNOMED_CT_INT#289259007 "Vaginal delivery"
+* SNOMED_CT_INT#200144004 "Cesarean delivery"
+* SNOMED_CT_INT#31208007 "Medical induction of labor"
+* SNOMED_CT_INT#302383004 "Forceps delivery"
+//* SNOMED_CT_INT#102879009 "Post-term delivery" //gestacion de más de 42 semanas

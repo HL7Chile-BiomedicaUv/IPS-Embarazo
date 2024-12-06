@@ -1,0 +1,16 @@
+Alias: loinc = http://loinc.org
+Alias: snomed = http://snomed.info/sct
+
+Instance:    Medicamento-Metformina
+InstanceOf:  MedicamentoClIps
+Usage:       #example
+Title:       "Medicamento - Metformina"
+Description: "Medicamento que utiliza el paciente, en este caso es la Metformina."
+
+* language = #es
+
+* status = #active
+
+* code
+  * coding = snomed#372567009 "Metformin"
+  * text = "Metformina"

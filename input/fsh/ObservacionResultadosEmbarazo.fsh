@@ -1,4 +1,5 @@
 Alias: $ResumenEmbarazo = http://hl7.org/fhir/uv/ips/ValueSet/pregnancies-summary-uv-ips
+Alias: TipoDePartos = https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos
 
 Profile: ResultadosEmbarazosCL
 Parent: ObservationResultadoEmbarazoClIps
@@ -19,6 +20,11 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "Códigos de resultados de embarazos"
 * code ^binding.description = "Representa los códigos sobre gestaciones anteriores que ha tenido la paciente."
+
+* code.extension contains TipoDePartos named TipoDePartos 0..* MS
+* code.extension[TipoDePartos] ^short = "Tipos de partos que ha tenido la paciente según los embarazos anteriores."
+* code obeys Emb-partos-resultados-Invariant-1
+
 //se eliminó la extension fecha de antecedente, dado que existe effective[x]
 * subject 1..1 MS
 * subject only Reference(PacienteEmbCL)
@@ -27,5 +33,9 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 * valueQuantity only Quantity
 * valueQuantity ^sliceName = "valueQuantity"
 
-//* extension contains NumeroDePartos named NumeroDePartos 1..1 MS
-//* extension[NumeroDePartos] ^short = "Número de partos que ha tenido la paciente"
+
+Invariant: Emb-partos-resultados-Invariant-1
+Description: "La extensión TipoDePartos solo puede usarse si el código está en el conjunto permitido."
+Severity: #error
+Expression: "code.coding.where(system = 'http://loinc.org').code in ('11636-8', '11637-6', '11638-4', '11639-2', '11640-0')"
+
