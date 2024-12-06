@@ -20,7 +20,9 @@ Description: "Ejemplo de una observación sobre un resumen de los resultados de 
 //  * text = "[#] Abortos"
 
 * code.extension.url = TiposDePartos
-* code.extension.valueCodeableConcept = snomed#48782003 "Delivery normal"
+* code.extension.valueCodeableConcept.coding.system = snomed
+* code.extension.valueCodeableConcept.coding.code = #48782003
+* code.extension.valueCodeableConcept.coding.display = "Delivery normal"
 
 * subject = Reference(Paciente-Emb-Ejemplo)
 * effectiveDateTime = "2022-08-18"
