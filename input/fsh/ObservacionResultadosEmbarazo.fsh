@@ -37,5 +37,5 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 Invariant: Emb-partos-resultados-Invariant-1
 Description: "La extensión TipoDePartos solo puede usarse si el código está en el conjunto permitido."
 Severity: #error
-Expression: "code.coding.where(system = 'http://loinc.org' and code in ('11636-8', '11637-6', '11638-4', '11639-2', '11640-0'))"
+Expression: "code.coding.exists(system = 'http://loinc.org' and code in {'11636-8', '11637-6', '11638-4', '11639-2', '11640-0'})"
 
