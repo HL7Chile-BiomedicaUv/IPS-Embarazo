@@ -37,4 +37,5 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 Invariant: Emb-partos-resultados-Invariant-1
 Description: "La extensión TipoDePartos solo puede usarse si el código está en el conjunto permitido."
 Severity: #error
-Expression: "extension.where(url = 'https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos').valueCodeableConcept.coding.exists(system = 'http://loinc.org' and (code = '11636-8' or code = '11637-6' or code = '11638-4' or code = '11639-2' or code = '11640-0'))"
+//Expression: "extension.where(url = 'https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos').value.coding.exists(system = 'http://loinc.org' and (code = '11636-8' or code = '11637-6' or code = '11638-4' or code = '11639-2' or code = '11640-0'))"
+Expression: "code.coding.where(system = 'http://loinc.org' and code in ('11636-8' or '11637-6' or '11638-4' or '11639-2' or '11640-0')).exists() implies extension.where(url = 'https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos').exists()"
