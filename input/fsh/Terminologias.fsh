@@ -247,7 +247,7 @@ Description: "Códigos sobre si la paciente no presenta el antecedente o resulta
 ValueSet: VSTipoParto
 Id: VSTipoParto
 Title: "Value Set sobre los tipos de parto de la paciente"
-Description: "Códigos provenientes del CodeSystem creado respecto a si la paciente no presenta el antecedente o resultados, si no se especifica u otro."
+Description: "Códigos provenientes de SNOMED sobre el tipo de parto de la paciente."
 
 * ^experimental = false
 * ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
@@ -266,3 +266,26 @@ Description: "Códigos provenientes del CodeSystem creado respecto a si la pacie
 * SNOMED_CT_INT#31208007 "Medical induction of labor"
 * SNOMED_CT_INT#302383004 "Forceps delivery"
 //* SNOMED_CT_INT#102879009 "Post-term delivery" //gestacion de más de 42 semanas
+
+ValueSet: VSMedicamentos
+Id: VSMedicamentos
+Title: "Value Set sobre los tipos de medicamentos que consume la paciente"
+Description: "Códigos provenientes de SNOMED sobre si la paciente consume o no medicamentos."
+
+* ^experimental = false
+* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+* ^status = #active
+* ^date = "2024-10-20T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
+
+* SNOMED_CT_INT#6247001 "Product containing folic acid (medicinal product)"
+* SNOMED_CT_INT#30729008 "Product containing iron (medicinal product)"
+* SNOMED_CT_INT#767113005 "Product containing calcium (medicinal product)"
+* SNOMED_CT_INT#108943009 "Product containing colecalciferol (medicinal product)"
+* SNOMED_CT_INT#46123006 "Product containing ascorbic acid (medicinal product)"
+* SNOMED_CT_INT#346441008 "Product containing fish derived omega 3 fatty acid (medicinal product)"
+* SNOMED_CT_INT#787481004 "No known medications"

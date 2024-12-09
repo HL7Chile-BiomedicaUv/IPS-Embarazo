@@ -16,6 +16,7 @@ Context: Patient
 * value[x] only integer
 * value[x] MS
 
+
 Extension: TipoDePartos
 Id: TipoDePartos
 Title: "Antecedentes de acuerdo al tipo de parto de la paciente"

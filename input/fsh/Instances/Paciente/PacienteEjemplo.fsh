@@ -58,14 +58,6 @@ Description: "Ejemplo de paciente según la guía de implementación de resumen 
 * address.city.extension[0].valueCodeableConcept.coding.code = #05101  // Código para Valparaiso
 * address.city.extension[0].valueCodeableConcept.coding.display = "Valparaíso"
 
-// Provincia
-//* district = "Santiago"
-// Extensión de provincia
-//* extension[1].url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ProvinciasCL"
-//* extension[1].valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSProvincias"
-//* extension[1].valueCodeableConcept.coding.code = "131"  // Código para provincia de Santiago
-//* extension[1].valueCodeableConcept.coding.display = "Santiago"
-
 // Región
 * address.state = "Valparaíso"
 
