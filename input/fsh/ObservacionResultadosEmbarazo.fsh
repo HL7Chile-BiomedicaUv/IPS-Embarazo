@@ -21,10 +21,6 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 * code ^binding.extension.valueString = "Códigos de resultados de embarazos"
 * code ^binding.description = "Representa los códigos sobre gestaciones anteriores que ha tenido la paciente."
 
-* code.extension contains TipoDePartos named TipoDePartos 0..* MS
-* code.extension[TipoDePartos] ^short = "Tipos de partos que ha tenido la paciente según los embarazos anteriores."
-* code.extension[TipoDePartos] obeys Emb-partos-resultados-Invariant-1
-
 //se eliminó la extension fecha de antecedente, dado que existe effective[x]
 * subject 1..1 MS
 * subject only Reference(PacienteEmbCL)
@@ -32,10 +28,3 @@ Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este p
 * valueQuantity 1..1 MS
 * valueQuantity only Quantity
 * valueQuantity ^sliceName = "valueQuantity"
-
-
-Invariant: Emb-partos-resultados-Invariant-1
-Description: "La extensión TipoDePartos solo puede usarse si el código está en el conjunto permitido."
-Severity: #error
-//Expression: "extension.where(url = 'https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos').value.coding.exists(system = 'http://loinc.org' and (code = '11636-8' or code = '11637-6' or code = '11638-4' or code = '11639-2' or code = '11640-0'))"
-Expression: "%resource.code.coding.where(system = 'http://loinc.org' and code in ('11636-8' or '11637-6' or '11638-4' or '11639-2' or '11640-0')).exists() implies extension.where(url = 'https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos').exists()"

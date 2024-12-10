@@ -1,7 +1,7 @@
 Profile: ProcedimientosEmbCL
 Parent: ProcedimientosClIps
 Id: Procedimientos-embarazo-cl-ips
-Title: "Antecedentes: Procedimientos (Embarazo-CL)"
+Title: "Procedimientos (Embarazo-CL)"
 Description: "Perfil de antecedentes quirúrgicos basado en la IPS chilena. Este perfil restringe el recurso Procedimientos para representar antecedentes quirúrgicos de la paciente."
 
 * ^version = "0.1.0"

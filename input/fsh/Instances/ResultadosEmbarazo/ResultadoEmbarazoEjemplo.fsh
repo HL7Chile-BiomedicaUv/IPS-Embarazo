@@ -1,7 +1,6 @@
 Alias: loinc = http://loinc.org
 Alias: snomed = http://snomed.info/sct
 Alias: ucum = http://unitsofmeasure.org
-Alias: TiposDePartos = https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos
 
 Instance:    ResultadoEmbarazoEjemplo
 InstanceOf:  ResultadosEmbarazosCL
@@ -18,11 +17,6 @@ Description: "Ejemplo de una observación sobre un resumen de los resultados de 
 //* code
 //  * coding = loinc#11612-9 "[#] Abortions"
 //  * text = "[#] Abortos"
-
-* code.extension[TipoDePartos].url = "https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos"
-* code.extension[TipoDePartos].valueCodeableConcept.coding.system = snomed
-* code.extension[TipoDePartos].valueCodeableConcept.coding.code = #48782003
-* code.extension[TipoDePartos].valueCodeableConcept.coding.display = "Delivery normal"
 
 * subject = Reference(Paciente-Emb-Ejemplo)
 * effectiveDateTime = "2022-08-18"

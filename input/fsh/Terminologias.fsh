@@ -259,13 +259,30 @@ Description: "Códigos provenientes de SNOMED sobre el tipo de parto de la pacie
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
-* SNOMED_CT_INT#48782003 "Delivery normal"
-//* SNOMED_CT_INT#282020008 "Premature delivery"
-* SNOMED_CT_INT#289259007 "Vaginal delivery"
-* SNOMED_CT_INT#200144004 "Cesarean delivery"
+* SNOMED_CT_INT#177184002 "Normal delivery procedure"
+* SNOMED_CT_INT#177141003 "Elective cesarean section"
+* SNOMED_CT_INT#11466000 "Cesarean section"
 * SNOMED_CT_INT#31208007 "Medical induction of labor"
 * SNOMED_CT_INT#302383004 "Forceps delivery"
-//* SNOMED_CT_INT#102879009 "Post-term delivery" //gestacion de más de 42 semanas
+* SNOMED_CT_INT#177185001 "Water birth delivery"
+* SNOMED_CT_INT#787480003 "No known procedures"
+
+ValueSet: VSCatProc
+Id: VSCatProc
+Title: "Value Set sobre la categoría del procedimiento relacionado al tipo de parto."
+Description: "Códigos provenientes de SNOMED sobre la categoría del procedimiento."
+
+* ^experimental = false
+* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
+* ^status = #active
+* ^date = "2024-10-20T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
+
+* SNOMED_CT_INT#386637004 "Obstetric procedure (procedure)"
 
 ValueSet: VSMedicamentos
 Id: VSMedicamentos
