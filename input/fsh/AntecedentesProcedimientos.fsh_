@@ -1,9 +1,10 @@
 Profile: ProcedimientosTipoDePartoEmbCL
-Parent: ProcedimientosClIps
+Parent: Procedure
 Id: Procedimientos-tipo-parto-cl-ips
 Title: "Antecedentes: Procedimiento por tipo de parto (Embarazo-CL)"
 Description: "Perfil de antecedentes de procedimientos basado en la IPS chilena. Este perfil restringe el recurso Procedimientos para representar antecedentes según el tipo de parto que haya tenido la paciente."
 
+* meta.profile = "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips"
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"
 * ^status = #draft
