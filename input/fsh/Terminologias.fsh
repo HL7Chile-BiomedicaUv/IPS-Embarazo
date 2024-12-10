@@ -244,9 +244,9 @@ Description: "Códigos sobre si la paciente no presenta el antecedente o resulta
 * #NE "No especifica"
 * #OT "Otro"
 
-ValueSet: VSTipoParto
-Id: VSTipoParto
-Title: "Value Set sobre los tipos de parto de la paciente"
+ValueSet: VSProcedecimientoTipoParto
+Id: VSProcedecimientoTipoParto
+Title: "Value Set sobre los tipos de procedimientos relacionados a los tipos de parto de la paciente"
 Description: "Códigos provenientes de SNOMED sobre el tipo de parto de la paciente."
 
 * ^experimental = false
@@ -283,6 +283,7 @@ Description: "Códigos provenientes de SNOMED sobre la categoría del procedimie
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
 * SNOMED_CT_INT#386637004 "Obstetric procedure (procedure)"
+* SNOMED_CT_INT#387713003 "Surgical procedure"
 
 ValueSet: VSMedicamentos
 Id: VSMedicamentos

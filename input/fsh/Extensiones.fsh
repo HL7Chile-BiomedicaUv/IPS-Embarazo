@@ -17,23 +17,41 @@ Context: Patient
 * value[x] MS
 
 
-//Extension: TipoDePartos
-//Id: TipoDePartos
-//Title: "Antecedentes de acuerdo al tipo de parto de la paciente"
-//Description: "Proporciona antecedentes respecto al o los tipos de parto que ha tenido la paciente."
-//Context: Observation
+Extension: ProcedimientosParto
+Id: ProcedimientosParto
+Title: "Procedimiento de acuerdo al tipo de parto de la paciente"
+Description: "Proporciona el procedimiento respecto al o los tipos de parto que ha tenido la paciente."
+Context: Procedure
 
-//* ^version = "0.1.0"
-//* ^publisher = "HL7 Chile"
-//* ^status = #draft
-//* ^contact.telecom.system = #url
-//* ^contact.telecom.value = "http://www.hl7chile.cl"
-//* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+* ^version = "0.1.0"
+* ^publisher = "HL7 Chile"
+* ^status = #draft
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-//* . ^short = "Antecedente relacionado al tipo de parto"
-//* . ^definition = "Proporciona antecedentes respecto al o los tipos de parto que ha tenido la paciente."
+* . ^short = "Procedimiento relacionado al tipo de parto"
+* . ^definition = "Proporciona el procedimiento respecto al o los tipos de parto que ha tenido la paciente."
 
-//* value[x] only CodeableConceptIPS
-//* value[x] MS
-//* value[x] from VSTipoParto (required)
+* value[x] only CodeableConceptIPS
+* value[x] MS
+* value[x] from VSProcedecimientoTipoParto (preferred)
 
+Extension: FechaProcedimientoParto
+Id: FechaProcedimientoParto
+Title: "Fecha del procedimiento de parto de la paciente"
+Description: "Proporciona la fecha del procedimiento de parto que ha tenido la paciente."
+Context: Procedure
+
+* ^version = "0.1.0"
+* ^publisher = "HL7 Chile"
+* ^status = #draft
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* . ^short = "Procedimiento relacionado al tipo de parto"
+* . ^definition = "Proporciona el procedimiento respecto al o los tipos de parto que ha tenido la paciente."
+
+* value[x] only dateTime
+* value[x] MS
