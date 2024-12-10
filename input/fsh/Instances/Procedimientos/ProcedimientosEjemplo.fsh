@@ -23,13 +23,10 @@ Description: "Ejemplo sobre algún procedimiento al que se ha sometido la pacien
 * performedDateTime.extension.valueCode = #unknown //Se espera que el valor exista pero se desconoce
 
 * extension[ProcedimientosParto].url = ProcedimientosParto
+* extension[FechaProcedimientoParto].url = "https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/FechaProcedimientoParto"
 * extension[ProcedimientosParto].valueCodeableConcept = snomed#11466000 "Cesarean section"
-//* extension[ProcedimientosParto]coding.code = #11466000
-//* extension[ProcedimientosParto]coding.display = "Cesarean section"
-//* extension[ProcedimientosParto]coding.text = "Cesárea"
-
-//* extension.url = FechaProcedimientoParto
-//* extension[ProcedimientosParto].extension.valueDateTime = "2024-12-03"
+* extension[ProcedimientosParto].valueCodeableConcept.text = "Cesárea"
+* extension[ProcedimientosParto].extension[FechaProcedimientoParto].valueDateTime = "2024-12-03"
 
 * category
   * coding = snomed#386637004 "Obstetric procedure (procedure)" //procedimiento
