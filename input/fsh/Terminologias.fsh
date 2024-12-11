@@ -205,8 +205,8 @@ Description: "Códigos UCUM sobre el consumo de alcohol."
 
 ValueSet: VSProcedimientos
 Id: VSProcedimientosIPS
-Title: "Procedimientos quirúrgicos que se ha realizado la paciente anteriormente."
-Description: "Códigos sobre procedimientos quirúrgicos que se ha realizado la paciente provenientes de Snomed-CT."
+Title: "Procedimientos médicos que se ha realizado la paciente anteriormente."
+Description: "Códigos sobre procedimientos médicos que se ha realizado la paciente provenientes de Snomed-CT."
 
 * ^experimental = false
 * ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
@@ -224,6 +224,12 @@ Description: "Códigos sobre procedimientos quirúrgicos que se ha realizado la 
 * SNOMED_CT_INT#237015004 "Surgical control of postpartum hemorrhage"
 * SNOMED_CT_INT#55565007 "Cardiac failure after obstetrical surgery AND/OR other procedure including delivery"
 * SNOMED_CT_INT#17744000 "Subtotal hysterectomy after cesarean delivery"
+* SNOMED_CT_INT#177184002 "Normal delivery procedure"
+* SNOMED_CT_INT#177141003 "Elective cesarean section"
+* SNOMED_CT_INT#11466000 "Cesarean section"
+* SNOMED_CT_INT#31208007 "Medical induction of labor"
+* SNOMED_CT_INT#302383004 "Forceps delivery"
+* SNOMED_CT_INT#177185001 "Water birth delivery"
 * SNOMED_CT_INT#787480003 "No known procedures"
 
 CodeSystem: CSOtrosDatos
@@ -243,29 +249,6 @@ Description: "Códigos sobre si la paciente no presenta el antecedente o resulta
 * #NI "Ninguno"
 * #NE "No especifica"
 * #OT "Otro"
-
-ValueSet: VSProcedecimientoTipoParto
-Id: VSProcedecimientoTipoParto
-Title: "Value Set sobre los tipos de procedimientos relacionados a los tipos de parto de la paciente"
-Description: "Códigos provenientes de SNOMED sobre el tipo de parto de la paciente."
-
-* ^experimental = false
-* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
-* ^status = #active
-* ^date = "2024-10-20T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
-
-* SNOMED_CT_INT#177184002 "Normal delivery procedure"
-* SNOMED_CT_INT#177141003 "Elective cesarean section"
-* SNOMED_CT_INT#11466000 "Cesarean section"
-* SNOMED_CT_INT#31208007 "Medical induction of labor"
-* SNOMED_CT_INT#302383004 "Forceps delivery"
-* SNOMED_CT_INT#177185001 "Water birth delivery"
-* SNOMED_CT_INT#787480003 "No known procedures"
 
 ValueSet: VSCatProc
 Id: VSCatProc

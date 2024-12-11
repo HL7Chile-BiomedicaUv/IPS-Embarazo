@@ -66,9 +66,10 @@ Description: "Ejemplo sobre un documento clínico que representa un conjunto de 
 * section[sectionProcedimientos].code.text = "Documento sobre Historia de Procedimientos"
 
 * section[sectionProcedimientos].text.status = #generated
-* section[sectionProcedimientos].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente no presenta procedimientos quirúrgicos asociados o lo desconoce.</div>"
+* section[sectionProcedimientos].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente no presenta procedimientos quirúrgicos asociados, pero si se realizó una cesárea como procedimiento obstétrico.</div>"
 
-* section[sectionProcedimientos].entry = Reference(Procedimiento-Emb-Ejemplo)
+* section[sectionProcedimientos].entry[procedimiento] = Reference(ProcedimientoDesc-Emb-Ejemplo)
+* section[sectionProcedimientos].entry[procedimiento] = Reference(Procedimiento-Emb-Ejemplo)
 
 * section[sectionEmbarazoHx].title = "Observación: Embarazo"
 * section[sectionEmbarazoHx].code.coding.system = loinc
@@ -77,7 +78,7 @@ Description: "Ejemplo sobre un documento clínico que representa un conjunto de 
 * section[sectionEmbarazoHx].code.text = "Historia de los embarazos"
 
 * section[sectionEmbarazoHx].text.status = #generated
-* section[sectionEmbarazoHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>value</b>: Embarazada</div><div><b>Code</b>: <span>77386006</span></div><div><b>Note</b>: El estado de embarazo positivo se dió el día 03 de marzo del 2024.</div><div><b>Status</b>: <span>final</span></div></li></ul></div>"
+* section[sectionEmbarazoHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente presentó un estado de embarazo positivo (Embarazada) el día 03 de marzo del presente año. Como resultado, se obtuvo que tiene un hijo.</div>"
 
-* section[sectionEmbarazoHx].entry[statusEmbarazo] only Reference(EstadoEmbarazo-Ejemplo) //Estado Embarazo
-* section[sectionEmbarazoHx].entry[resultadoEmbarazo] only Reference(ResultadoEmbarazoEjemplo) //Resultados Embarazo
+* section[sectionEmbarazoHx].entry[statusEmbarazo] = Reference(EstadoEmbarazo-Ejemplo) //Estado Embarazo
+* section[sectionEmbarazoHx].entry[resultadoEmbarazo] = Reference(ResultadoEmbarazoEjemplo) //Resultados Embarazo

@@ -18,8 +18,12 @@ Description: "Perfil de antecedentes quirúrgicos basado en la IPS chilena. Este
 * code only CodeableConceptIPS
 * code from VSProcedimientos (preferred)
 
+* category 0..1 MS
+* category only CodeableConceptIPS
+* category from VSCatProc (preferred)
+
 * performed[x] 1..1 MS
-* performed[x] only dateTime or Period
+* performed[x] only dateTime
 * asserter only Reference(PacienteEmbCL or RelatedPerson or PrestadorEmbCL or CoreRolClinicoCl)
 * performer
   * actor only Reference(PacienteEmbCL or RelatedPerson or PrestadorEmbCL or RolPrestadorEmbCL or OrganizacionEmbCL)

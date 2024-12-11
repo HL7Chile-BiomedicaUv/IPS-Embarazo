@@ -19,7 +19,7 @@ Description: "Ejemplo de una observación sobre un resumen de los resultados de 
 //  * text = "[#] Abortos"
 
 * subject = Reference(Paciente-Emb-Ejemplo)
-* effectiveDateTime = "2022-08-18"
+* effectiveDateTime = "2024-12-08"
 * performer = Reference(Prestador-Emb-Ejemplo)
 
 * valueQuantity.value = 1

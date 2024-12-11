@@ -50,6 +50,8 @@ Description: "Ejemplo sobre un documento clínico tipo Bundle que representa el 
 //Procedimientos
 * entry[+].fullUrl = "urn:uuid:473d6a29-96a5-4a8d-8598-05c4db377c87"
 * entry[=].resource = 473d6a29-96a5-4a8d-8598-05c4db377c87
+* entry[+].fullUrl = "urn:uuid:18aeb8f9-3ab8-47cb-9991-9ade00521929"
+* entry[=].resource = 18aeb8f9-3ab8-47cb-9991-9ade00521929
 //Estado Embarazo
 * entry[+].fullUrl = "urn:uuid:ea4b4cb7-d449-4b7e-978c-2a446bd547b1"
 * entry[=].resource = ea4b4cb7-d449-4b7e-978c-2a446bd547b1
@@ -129,7 +131,9 @@ Usage: #inline
 * section[=].code.text = "Documento sobre Historia de Procedimientos"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente no presenta procedimientos quirúrgicos asociados o lo desconoce.</div>"
-* section[=].entry = Reference(urn:uuid:473d6a29-96a5-4a8d-8598-05c4db377c87)
+* section[=].entry[0] = Reference(urn:uuid:473d6a29-96a5-4a8d-8598-05c4db377c87)
+* section[=].entry[+] = Reference(urn:uuid:18aeb8f9-3ab8-47cb-9991-9ade00521929)
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Instance: 503a0267-1cfd-44cc-a382-e052a78fa5cc
@@ -139,11 +143,11 @@ Usage: #inline
 * meta.profile = "https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/Prestador-embarazo-cl-ips"
 
 //Identificación por Cédula Chilena
-* identifier[run].use = #official
-* identifier[run].value = "15325467-k"
-* identifier[run].type.coding.system = CSTipoIdentificador
-* identifier[run].type.coding.code = #01
-* identifier[run].type.coding.display = "RUN"
+* identifier.use = #official
+* identifier.value = "15325467-k"
+* identifier.type.coding.system = CSTipoIdentificador
+* identifier.type.coding.code = #01
+* identifier.type.coding.display = "RUN"
 
 //Nombre Prestador
 * name.use = #official
@@ -178,34 +182,33 @@ Usage: #inline
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/Paciente-embarazo-cl-ips"
 
-* identifier[RUN].use = #official    // Obligado
-* identifier[RUN].type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI"
-* identifier[RUN].type.coding.code = #NNCHL
-* identifier[RUN].type.coding.display = "Chile"
+* identifier.use = #official    // Obligado
+* identifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI"
+* identifier.type.coding.code = #NNCHL
+* identifier.type.coding.display = "Chile"
 
 // Extensión para el País de Emisión del Documento
-* identifier[RUN].type.extension.url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises"
-* identifier[RUN].type.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"
-* identifier[RUN].type.extension.valueCodeableConcept.coding.code = #152
-* identifier[RUN].type.extension.valueCodeableConcept.coding.display = "Chile"
+* identifier.type.extension.url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises"
+* identifier.type.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"
+* identifier.type.extension.valueCodeableConcept.coding.code = #152
+* identifier.type.extension.valueCodeableConcept.coding.display = "Chile"
 
 // Definir el sistema y valor del identificador
-* identifier[RUN].system = "http://regcivil.cl/Validacion/RUN"
-* identifier[RUN].value = "14.241.432-8" //38 años app
+* identifier.system = "http://regcivil.cl/Validacion/RUN"
+* identifier.value = "14.241.432-8" //38 años app
 
 * active = true //Registro activo
 
 //Nombre Oficial
-* name[NombreOficial].use = #official
-* name[NombreOficial].family = "Henriquez"
+* name.use = #official
+* name.family = "Henriquez"
 //* name[NombreOficial].family.extension[segundoApellido] = SegundoApellidoPacienteCL
-* name[NombreOficial].given[0] = "Susana"
-* name[NombreOficial].given[+] = "Mercedes"
-//* name[NombreOficial].given[+] = ""
+* name.given[0] = "Susana"
+* name.given[+] = "Mercedes"
 
 //nombre social
-* name[NombreSocial].use = #usual
-* name[NombreSocial].given = "Susy"
+* name.use = #usual
+* name.given = "Susy"
 
 * extension.url = edad
 * extension.valueInteger = 38
@@ -403,12 +406,36 @@ Usage: #inline
 
 * subject = Reference(Paciente-Emb-Ejemplo) //Quien se hizo el procedimiento
 
-* performed.extension[data-absent-reason].url = urlextension //cuando se hizo el procedimiento
-* performed.extension[data-absent-reason].valueCode = #unknown //Se espera que el valor exista pero se desconoce
+* statusReason
+  * coding = snomed#416128008 "No past history of procedure" //procedimiento
+  * text = "No hay antecedentes de procedimientos"
 
 * note.text = """
 ### NOTA:
-La paciente desconoce o no se ha realizado procedimientos quirúrgicos ginecológicos u otros.
+La paciente desconoce o no tiene antecedentes de procedimientos quirúrgicos ginecológicos u otros.
+"""
+Instance: 18aeb8f9-3ab8-47cb-9991-9ade00521929
+InstanceOf: Procedure
+
+* meta.profile = "https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/Procedimientos-embarazo-cl-ips"
+
+* status = #completed //completado
+
+* code
+  * coding = snomed#11466000 "Cesarean section" //procedimiento
+  * text = "Cesárea"
+
+* category
+  * coding = snomed#386637004 "Obstetric procedure (procedure)" //procedimiento categoria
+  * text = "Procedimiento obstétrico"
+
+* subject = Reference(Paciente-Emb-Ejemplo) //Quien se hizo el procedimiento
+
+* performedDateTime = "2024-11-27"
+
+* note.text = """
+### NOTA:
+La paciente se realizó el procedimiento obstétrico de cesárea con fecha 03 de diciembre del presente año. En este caso, la fecha representa la fecha de nacimiento del bebé.
 """
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -446,4 +473,17 @@ Usage: #inline
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/Resultados-de-embarazos-cl-ips"
 
-....
+* status = #final
+
+* code
+  * coding = loinc#11640-0 "[#] Births total"
+  * text = "[#] Nacimientos totales"
+
+* subject = Reference(Paciente-Emb-Ejemplo)
+* effectiveDateTime = "2022-08-18"
+* performer = Reference(Prestador-Emb-Ejemplo)
+
+* valueQuantity.value = 1
+* valueQuantity.unit = "hijo"
+* valueQuantity.system = ucum
+* valueQuantity.code = #1 //se refiere al numero de nacimientos totales segun el codigo de arriba
