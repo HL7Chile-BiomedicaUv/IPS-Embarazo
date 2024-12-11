@@ -121,7 +121,7 @@ Usage: #inline
 * section[=].code.coding.display = "History of pregnancies Narrative"
 * section[=].code.text = "Historia de los embarazos"
 * section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>value</b>: Embarazada</div><div><b>Code</b>: <span>77386006</span></div><div><b>Note</b>: El estado de embarazo positivo se dió el día 03 de marzo del 2024.</div><div><b>Status</b>: <span>final</span></div></li></ul></div>"
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente presentó un estado de embarazo positivo (Embarazada) el día 03 de marzo del presente año. Como resultado, se obtuvo que tiene un hijo.</div>"
 * section[=].entry[0] = Reference(urn:uuid:ea4b4cb7-d449-4b7e-978c-2a446bd547b1) //Estado Embarazo
 * section[=].entry[+] = Reference(urn:uuid:76555e43-8a81-4821-92aa-cab7c57010f0) //Resultados Embarazo
 
