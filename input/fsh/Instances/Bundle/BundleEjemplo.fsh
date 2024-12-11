@@ -131,7 +131,7 @@ Usage: #inline
 * section[=].code.coding.display = "History of Procedures Document"
 * section[=].code.text = "Documento sobre Historia de Procedimientos"
 * section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente no presenta procedimientos quirúrgicos asociados o lo desconoce.</div>"
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente se realizó una cesárea categorizada como procedimiento obstétrico el día 26 de noviembre del presente año.</div>"
 * section[=].entry = Reference(urn:uuid:18aeb8f9-3ab8-47cb-9991-9ade00521929)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -394,6 +394,7 @@ La paciente durante su post parto anterior presentó hipertensión arterial, dad
 
 Instance: 18aeb8f9-3ab8-47cb-9991-9ade00521929
 InstanceOf: Procedure
+Usage: #inline
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/Procedimientos-embarazo-cl-ips"
 
