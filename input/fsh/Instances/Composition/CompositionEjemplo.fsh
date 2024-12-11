@@ -66,9 +66,8 @@ Description: "Ejemplo sobre un documento clínico que representa un conjunto de 
 * section[sectionProcedimientos].code.text = "Documento sobre Historia de Procedimientos"
 
 * section[sectionProcedimientos].text.status = #generated
-* section[sectionProcedimientos].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente no presenta procedimientos quirúrgicos asociados, pero si se realizó una cesárea como procedimiento obstétrico.</div>"
+* section[sectionProcedimientos].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente se realizó una cesárea como procedimiento obstétrico el día 27 de noviembre del presente año.</div>"
 
-* section[sectionProcedimientos].entry[procedimiento] = Reference(ProcedimientoDesc-Emb-Ejemplo)
 * section[sectionProcedimientos].entry[procedimiento] = Reference(Procedimiento-Emb-Ejemplo)
 
 * section[sectionEmbarazoHx].title = "Observación: Embarazo"

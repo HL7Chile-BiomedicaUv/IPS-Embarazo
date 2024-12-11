@@ -48,8 +48,6 @@ Description: "Ejemplo sobre un documento clínico tipo Bundle que representa el 
 * entry[+].fullUrl = "urn:uuid:fd5676b3-0011-49a3-9c21-d1bd8458f350"
 * entry[=].resource = fd5676b3-0011-49a3-9c21-d1bd8458f350
 //Procedimientos
-* entry[+].fullUrl = "urn:uuid:473d6a29-96a5-4a8d-8598-05c4db377c87"
-* entry[=].resource = 473d6a29-96a5-4a8d-8598-05c4db377c87
 * entry[+].fullUrl = "urn:uuid:18aeb8f9-3ab8-47cb-9991-9ade00521929"
 * entry[=].resource = 18aeb8f9-3ab8-47cb-9991-9ade00521929
 //Estado Embarazo
@@ -131,8 +129,7 @@ Usage: #inline
 * section[=].code.text = "Documento sobre Historia de Procedimientos"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente no presenta procedimientos quirúrgicos asociados o lo desconoce.</div>"
-* section[=].entry[0] = Reference(urn:uuid:473d6a29-96a5-4a8d-8598-05c4db377c87)
-* section[=].entry[+] = Reference(urn:uuid:18aeb8f9-3ab8-47cb-9991-9ade00521929)
+* section[=].entry = Reference(urn:uuid:18aeb8f9-3ab8-47cb-9991-9ade00521929)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -207,8 +204,8 @@ Usage: #inline
 * name.given[+] = "Mercedes"
 
 //nombre social
-* name.use = #usual
-* name.given = "Susy"
+//* name.use = #usual
+//* name.given = "Susy"
 
 * extension.url = edad
 * extension.valueInteger = 38
@@ -392,28 +389,6 @@ La paciente durante su post parto anterior presentó hipertensión arterial, dad
 """
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Instance: 473d6a29-96a5-4a8d-8598-05c4db377c87
-InstanceOf: Procedure
-Usage: #inline
-
-* meta.profile = "https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/Procedimientos-embarazo-cl-ips"
-
-* status = #unknown //desconocido
-
-* code
-  * coding = snomed#787480003 "No known procedures" //procedimiento
-  * text = "No se conocen procedimientos"
-
-* subject = Reference(Paciente-Emb-Ejemplo) //Quien se hizo el procedimiento
-
-* statusReason
-  * coding = snomed#416128008 "No past history of procedure" //procedimiento
-  * text = "No hay antecedentes de procedimientos"
-
-* note.text = """
-### NOTA:
-La paciente desconoce o no tiene antecedentes de procedimientos quirúrgicos ginecológicos u otros.
-"""
 Instance: 18aeb8f9-3ab8-47cb-9991-9ade00521929
 InstanceOf: Procedure
 
