@@ -1,7 +1,6 @@
 Alias: loinc = http://loinc.org
 Alias: snomed = http://snomed.info/sct
 Alias: urlextension = http://hl7.org/fhir/StructureDefinition/data-absent-reason
-Alias: CSDataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 
 Instance:    Procedimiento-Emb-Ejemplo
 InstanceOf:  ProcedimientosEmbCL
