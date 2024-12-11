@@ -21,7 +21,7 @@ Description: "Ejemplo sobre procedimiento obstétrico al que se ha sometido la p
 
 * subject = Reference(Paciente-Emb-Ejemplo) //Quien se hizo el procedimiento
 
-* performedDateTime = "2024-11-27"
+* performedDateTime = "2024-11-26"
 
 * note.text = """
 ### NOTA:

@@ -24,11 +24,11 @@ Description: "Ejemplo sobre un documento clínico tipo Bundle que representa el 
 * timestamp = "2024-12-03T13:00:00.000-04:00" //instante de tiempo; fecha de creación del documento
 
 //composition
-* entry[0].fullUrl = "urn:uuid:debdd403-9c7e-48d0-93c4-71a4ecc89f2f" //URI para identificar el recurso composition dentro del bundle (se generó aleatoreamente)
-* entry[=].resource = debdd403-9c7e-48d0-93c4-71a4ecc89f2f
+* entry[0].fullUrl = "urn:uuid:1637493f-e222-4005-ac6b-17e7d17122e0" //URI para identificar el recurso composition dentro del bundle (se generó aleatoreamente)
+* entry[=].resource = 1637493f-e222-4005-ac6b-17e7d17122e0
 //patient
-* entry[+].fullUrl = "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a"
-* entry[=].resource = a4104fff-1237-4cc4-8b7e-6c4c235f282a
+* entry[+].fullUrl = "urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c"
+* entry[=].resource = 6e251b4d-1ed9-48b9-850a-138d9849507c
 //prestador
 * entry[+].fullUrl = "urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc"
 * entry[=].resource = 503a0267-1cfd-44cc-a382-e052a78fa5cc
@@ -56,10 +56,13 @@ Description: "Ejemplo sobre un documento clínico tipo Bundle que representa el 
 //Resultados Embarazo
 * entry[+].fullUrl = "urn:uuid:76555e43-8a81-4821-92aa-cab7c57010f0"
 * entry[=].resource = 76555e43-8a81-4821-92aa-cab7c57010f0
+//Fecha Estimada de Parto
+* entry[+].fullUrl = "urn:uuid:660b0997-ec98-4981-92ee-bd7b5d44d215"
+* entry[=].resource = 660b0997-ec98-4981-92ee-bd7b5d44d215
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Instance: debdd403-9c7e-48d0-93c4-71a4ecc89f2f
+Instance: 1637493f-e222-4005-ac6b-17e7d17122e0
 InstanceOf: Composition
 Usage: #inline
 
@@ -69,7 +72,7 @@ Usage: #inline
   * coding = loinc#60591-5 "Patient summary Document"
   * text = "Documento resumen de paciente embarazada"
 
-* subject = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a)
+* subject = Reference(urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c)
 
 * date = "2024-12-03" //tiempo de edición del documento
 //prestador
@@ -173,7 +176,7 @@ Usage: #inline
 * telecom.value = "cesfam.baron@gmail.com"
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Instance: a4104fff-1237-4cc4-8b7e-6c4c235f282a
+Instance: 6e251b4d-1ed9-48b9-850a-138d9849507c
 InstanceOf: Patient
 Usage: #inline
 
@@ -258,10 +261,10 @@ Usage: #inline
 
 * status = #active
 
-* medicationReference = Reference(Medicamento-Emb-Ejemplo)
+* medicationReference = Reference(urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427)
 * medicationReference.display = "Tableta de calcio"
 
-* subject = Reference(Paciente-Emb-Ejemplo)
+* subject = Reference(urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c)
 * effectivePeriod.start = "2024-08-03" //comenzó con el uso de tabletas durante junio
 //* effectivePeriod.end = "2019-02-07"
 
@@ -334,14 +337,14 @@ Usage: #inline
   * coding = snomed#3829006 "Iron"
   * text = "Hierro"
 
-* patient = Reference(Paciente-Emb-Ejemplo) //Para quien es la prescripción de medicacion
+* patient = Reference(urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c) //Para quien es la prescripción de medicacion
 
 * onsetAge.value = 15
 * onsetAge.system = ucum
 * onsetAge.code = #a
 * onsetAge.unit = "años"
 
-* recorder = Reference(Prestador-Emb-Ejemplo) //es quien registro la alergia
+* recorder = Reference(urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc) //es quien registro la alergia
 
 * reaction
   * manifestation
@@ -377,11 +380,11 @@ Usage: #inline
   * coding = snomed#6736007 "Moderate severity"
   * text = "Moderado"
 
-* subject = Reference(Paciente-Emb-Ejemplo)
+* subject = Reference(urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c)
 
 * onsetPeriod.start = "2023-10-30" //periodo de inicio de la condicion
 
-* asserter = Reference(Prestador-Emb-Ejemplo)
+* asserter = Reference(urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc)
 
 * note.text = """
 ### NOTA:
@@ -404,9 +407,9 @@ InstanceOf: Procedure
   * coding = snomed#386637004 "Obstetric procedure (procedure)" //procedimiento categoria
   * text = "Procedimiento obstétrico"
 
-* subject = Reference(Paciente-Emb-Ejemplo) //Quien se hizo el procedimiento
+* subject = Reference(urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c) //Quien se hizo el procedimiento
 
-* performedDateTime = "2024-11-27"
+* performedDateTime = "2024-11-26"
 
 * note.text = """
 ### NOTA:
@@ -426,15 +429,15 @@ Usage: #inline
   * coding = loinc#82810-3 "Pregnancy status"
   * text = "Estado de embarazo"
 
-* subject = Reference(Paciente-Emb-Ejemplo)
+* subject = Reference(urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c)
 * effectiveDateTime = "2024-03-03" //momento en el que se afirma que el valor es verdadero
-* performer = Reference(Prestador-Emb-Ejemplo)
+* performer = Reference(urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc)
 
 * valueCodeableConcept
   * coding = snomed#77386006 "Pregnancy"
   * text = "Embarazada"
 
-* hasMember = Reference(FechaEstimadaParto-Ejemplo)
+* hasMember = Reference(urn:uuid:660b0997-ec98-4981-92ee-bd7b5d44d215)
 
 * note.text = """
 ### NOTA:
@@ -454,11 +457,38 @@ Usage: #inline
   * coding = loinc#11640-0 "[#] Births total"
   * text = "[#] Nacimientos totales"
 
-* subject = Reference(Paciente-Emb-Ejemplo)
+* subject = Reference(urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c)
 * effectiveDateTime = "2022-08-18"
-* performer = Reference(Prestador-Emb-Ejemplo)
+* performer = Reference(urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc)
 
 * valueQuantity.value = 1
 * valueQuantity.unit = "hijo"
 * valueQuantity.system = ucum
 * valueQuantity.code = #1 //se refiere al numero de nacimientos totales segun el codigo de arriba
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Instance: 660b0997-ec98-4981-92ee-bd7b5d44d215
+InstanceOf: Observation
+Usage: #inline
+
+* meta.profile = "https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/Fecha-estimada-de-parto-cl-ips"
+
+* status = #final
+
+* code
+  * coding = loinc#11779-6 "Delivery date Estimated from last menstrual period"
+  * text = "Fecha estimada de parto a partir del último periodo menstrual (FUR Operacional)"
+
+* subject = Reference(urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c)
+
+* effectiveDateTime = "2024-05-05"
+
+* performer = Reference(urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc)
+
+* valueDateTime = "2024-11-26" //corresponde a la fecha estimada de parto segun el prestador
+
+* note.text = """
+### NOTA: Se realizó una ecografía el día 05 de mayo (durante el primer trimestre) a la paciente para determinar la fecha de última regla de
+de manera más precisa (FUR Operacional). Por lo tanto, la fecha estimada de parto es en noviembre de este año.
+"""
