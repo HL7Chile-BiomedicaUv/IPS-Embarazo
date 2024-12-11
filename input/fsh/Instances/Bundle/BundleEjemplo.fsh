@@ -48,8 +48,8 @@ Description: "Ejemplo sobre un documento clínico tipo Bundle que representa el 
 * entry[+].fullUrl = "urn:uuid:fd5676b3-0011-49a3-9c21-d1bd8458f350"
 * entry[=].resource = fd5676b3-0011-49a3-9c21-d1bd8458f350
 //Procedimientos
-* entry[+].fullUrl = "urn:uuid:18aeb8f9-3ab8-47cb-9991-9ade00521929"
-* entry[=].resource = 18aeb8f9-3ab8-47cb-9991-9ade00521929
+* entry[+].fullUrl = "urn:uuid:44f4b385-d48d-4a7b-8959-3b87f3b23ebe"
+* entry[=].resource = 44f4b385-d48d-4a7b-8959-3b87f3b23ebe
 //Estado Embarazo
 * entry[+].fullUrl = "urn:uuid:ea4b4cb7-d449-4b7e-978c-2a446bd547b1"
 * entry[=].resource = ea4b4cb7-d449-4b7e-978c-2a446bd547b1
@@ -132,7 +132,7 @@ Usage: #inline
 * section[=].code.text = "Documento sobre Historia de Procedimientos"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">La paciente se realizó una cesárea categorizada como procedimiento obstétrico el día 26 de noviembre del presente año.</div>"
-* section[=].entry = Reference(urn:uuid:18aeb8f9-3ab8-47cb-9991-9ade00521929)
+* section[=].entry = Reference(urn:uuid:44f4b385-d48d-4a7b-8959-3b87f3b23ebe)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -392,7 +392,7 @@ La paciente durante su post parto anterior presentó hipertensión arterial, dad
 """
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Instance: 18aeb8f9-3ab8-47cb-9991-9ade00521929
+Instance: 44f4b385-d48d-4a7b-8959-3b87f3b23ebe
 InstanceOf: Procedure
 Usage: #inline
 
