@@ -1,11 +1,12 @@
 Alias: $ResumenEmbarazo = http://hl7.org/fhir/uv/ips/ValueSet/pregnancies-summary-uv-ips
-Alias: TipoDePartos = https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/TipoDePartos
 
 Profile: ResultadosEmbarazosCL
 Parent: ObservationResultadoEmbarazoClIps
 Id: Resultados-de-embarazos-cl-ips
 Title: "Resultados de Embarazos (Embarazo-CL)"
-Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este perfil restringe el recurso Observación para representar un resumen sobre resultados de embarazos de la paciente."
+Description: "Perfil de resultados de embarazos basado en la IPS chilena. Este perfil restringe el recurso Observación para representar un resumen sobre resultados de embarazos de la paciente.
+
+Este perfil hace referencia a cantidades relacionadas a cualquiera de los códigos especificados en el ValueSet indicado en el Binding."
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"

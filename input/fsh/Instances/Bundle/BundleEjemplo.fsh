@@ -328,7 +328,7 @@ Usage: #inline
 * requester = Reference(urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc)
 
 * medicationReference = Reference(urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427)
-* medicationReference.display = " Tableta de Calcio"
+* medicationReference.display = "Tableta de Calcio"
 
 * subject = Reference(urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c) //Para quien es la prescripción de medicacion
 

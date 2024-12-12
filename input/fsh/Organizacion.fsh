@@ -1,6 +1,5 @@
 Alias: $VSRol =  http://hl7.org/fhir/uv/ips/ValueSet/healthcare-professional-roles-uv-ips
 Alias: $VSEspecialidades =  https://hl7chile.cl/fhir/ig/clcore/ValueSet/VSEspecialidadesCL
-//Alias: CodeableConceptIPS = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 
 Profile: OrganizacionEmbCL
 Parent: OrganizacionClIps

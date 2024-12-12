@@ -2,9 +2,7 @@ Profile: MedicamentoCL
 Parent: MedicamentoClIps
 Id: Medicamento-embarazos-cl-ips
 Title: "Medicamentos (Embarazo-CL)"
-Description: "Perfil de medicamentos basado en la IPS chilena. Este perfil restringe el recurso Medicamento para representar los medicamentos que usa la paciente.
-
-Se pueden registrar las vitaminas que consume la paciente."
+Description: "Perfil de medicamentos basado en la IPS chilena. Este perfil restringe el recurso Medicamento para representar los medicamentos que usa la paciente, en este caso, las vitaminas administradas."
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"

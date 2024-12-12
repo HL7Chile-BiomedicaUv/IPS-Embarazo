@@ -6,7 +6,8 @@ Id: Fecha-estimada-de-parto-cl-ips
 Title: "Fecha Estimada de Parto (Embarazo-CL)"
 Description: "Perfil de la fecha estimada de parto basado en la IPS chilena. Este perfil restringe el recurso Observación para representar la fecha estimada de parto de la paciente que se encuentra embarazada.
 
-Se debe tener en consideración que el "
+Se debe tener en consideración que, si se utiliza el dato *Delivery date Estimated from last menstrual period* (Fecha de parto Estimada a partir del último período menstrual) proveniente del ValueSet definido en el elemento code, este puede hacer referencia tanto la FUR Operacional como la FUR Gestante.
+FUR hace referencia a la Fecha de Última Regla. La FUR operacional corresponde a la fecha estimada de parto indicada por el profesional de la salud, mientras que la FUR Gestante es la que indica la paciente. Por ello, dependiendo de la que se vaya a registrar, indicar el performer correspondiente."
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"

@@ -17,7 +17,7 @@ Description: "Ejemplo sobre la prescripción de medicación relacionada con la p
 * requester = Reference(Prestador-Emb-Ejemplo)
 
 * medicationReference = Reference(Medicamento-Emb-Ejemplo)
-* medicationReference.display = " Tableta de Calcio"
+* medicationReference.display = "Tableta de Calcio"
 
 * subject = Reference(Paciente-Emb-Ejemplo) //Para quien es la prescripción de medicacion
 

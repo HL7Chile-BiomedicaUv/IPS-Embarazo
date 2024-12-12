@@ -22,7 +22,7 @@ Esta guía de implementación se estructura de la siguiente manera, de acuerdo a
 * [Objetivos](Objetivos.html): Provee de información general sobre los objetivos de esta guía.
 * [Casos de Uso](Casos-de-uso.html): Provee de información sobre los casos de uso, sus actores y las transacciones por caso de uso.
 * [Artefactos](artifacts.html): Página que contiene todos los artefactos de la guía. Estos son: Perfiles, Extensiones, ValueSets, CodeSystem y Ejemplos.
-* [Historial de Cambios](Changes.html)
+* [Historial de Cambios](Changes.html): Contiene los cambios realizados en la guía de implementación.
 
 Esta estructura está diseñada para facilitar la navegación a través de los diversos componentes de la guía de implementación además de mejorar su comprensión.
 
@@ -41,11 +41,12 @@ El proceso abarca desde la solicitud del resumen clínico por parte del profesio
 
 Antes de que el servidor envíe el resumen como un documento, se debe tener en cuenta lo siguiente:
 
-* Se debe verificar la existencia del paciente en el sistema, es decir, si es que presenta fichas clínicas para su identificación. Si el paciente no existe, se debe crear su ficha con sus datos.
+* Se debe verificar la existencia del paciente en el sistema, es decir, si es que presenta fichas clínicas para su identificación. Esto por medio de la operación *$Summary*, la cual además revisa la factibilidad del resumen. Si es que todo se encuentra de acuerdo a lo solicitado, *$Summary* agrupa los recursos dentro del repositorio para armar el documento en modo de resumen clínico del paciente. En caso de que el paciente no exista, se debe crear su ficha con sus datos, lo que es parte de otro proceso.
 * Se deben considerar los datos del paciente contenidos en los recursos almacenados. El profesional de la salud puede crear recursos o bien, puede actualizar la información. 
 
-*Ejemplo (Actualizar):* La paciente, que ya tenía alergias, presenta una nueva alergia confirmada y diagnosticada y debe ser registrada en el sistema.
-*Ejemplo (Crear):* Una paciente sana presenta un problema de salud confirmado y diagnosticado, pero no se encuentra registrado, por lo que el profesional de la salud procede a crear el recurso Condition.
+  - **Ejemplo *(Actualizar)*:** La paciente, que ya tenía alergias, presenta una nueva alergia confirmada y diagnosticada y debe ser registrada en el sistema.
+
+  - **Ejemplo *(Crear)*:** Una paciente sana presenta un problema de salud confirmado y diagnosticado, pero no se encuentra registrado, por lo que el profesional de la salud procede a crear el recurso Condition.
 
 ### Dependencias
 

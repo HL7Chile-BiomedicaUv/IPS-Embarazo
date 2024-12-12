@@ -67,34 +67,6 @@ Description: "Códigos sobre la especialidad del profesional definidos en Snomed
 * CSEspecialidadesConacem#39 "Medicina Materno Fetal"
 * CSEspecialidadesConacem#42 "Medicina Reproductiva"
 
-ValueSet: VSPartos
-Id: VSPartosIPS
-Title: "Tipos de Partos"
-Description: "Códigos sobre los de tipos de parto que pudo tener la paciente con anterioridad definidos en Snomed-CT."
-
-* ^experimental = false
-* ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
-* ^status = #active
-* ^date = "2024-10-20T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
-
-* include codes from system CSOtrosDatos
-
-* SNOMED_CT_INT#267015005  "Past pregnancy history of full term delivery"
-* SNOMED_CT_INT#48782003 "Spontaneous vaginal delivery"
-* SNOMED_CT_INT#282020008 "Premature delivery"
-* SNOMED_CT_INT#289259007 "Vaginal delivery"
-* SNOMED_CT_INT#200144004 "Cesarean delivery"
-* SNOMED_CT_INT#48975005 "Stimulated labor"
-* SNOMED_CT_INT#302383004 "Forceps delivery"
-* CSOtrosDatos#NI "Ninguno"
-* CSOtrosDatos#NE "No especifica"
-* CSOtrosDatos#OT "Otro"
-
 ValueSet: VSPatologias
 Id: VSPatologiasIPS
 Title: "Condición de salud o patologías de la paciente"
@@ -218,18 +190,25 @@ Description: "Códigos sobre procedimientos médicos que se ha realizado la paci
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
-* SNOMED_CT_INT#408469009 "Breast surgery"
-* SNOMED_CT_INT#183988005 "Gynecological operation planned"
+* SNOMED_CT_INT#306181005 "Referral to breast surgery service"
+* SNOMED_CT_INT#176757001 "Gynecological operation on upper female genital tract"
+* SNOMED_CT_INT#176582003 "Gynecological operation of lower female genital tract"
 * SNOMED_CT_INT#386809009 "Operation on fetus"
+* SNOMED_CT_INT#302375005 "Operative termination of pregnancy"
 * SNOMED_CT_INT#237015004 "Surgical control of postpartum hemorrhage"
-* SNOMED_CT_INT#55565007 "Cardiac failure after obstetrical surgery AND/OR other procedure including delivery"
 * SNOMED_CT_INT#17744000 "Subtotal hysterectomy after cesarean delivery"
+* SNOMED_CT_INT#386638009 "Obstetric operation"
+* SNOMED_CT_INT#236991000 "Operation to facilitate delivery"
+* SNOMED_CT_INT#236945008 "Antepartum obstetric procedure"
 * SNOMED_CT_INT#177184002 "Normal delivery procedure"
 * SNOMED_CT_INT#177141003 "Elective cesarean section"
 * SNOMED_CT_INT#11466000 "Cesarean section"
 * SNOMED_CT_INT#31208007 "Medical induction of labor"
+* SNOMED_CT_INT#408818004 "Induction of labor by artificial rupture of membranes"
+* SNOMED_CT_INT#177129005 "Surgical induction of labor"
 * SNOMED_CT_INT#302383004 "Forceps delivery"
 * SNOMED_CT_INT#177185001 "Water birth delivery"
+* SNOMED_CT_INT#5556001 "Assisted spontaneous delivery"
 * SNOMED_CT_INT#787480003 "No known procedures"
 
 CodeSystem: CSOtrosDatos
