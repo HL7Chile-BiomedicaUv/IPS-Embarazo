@@ -30,6 +30,5 @@ Description: "Perfil de prescripción basado en la IPS chilena. Este perfil repr
 * dosageInstruction 1..* MS
 * dosageInstruction.text MS
 * dosageInstruction.timing 1..1 MS
-* dosageInstruction.route only CodeableConceptIPS 
-* dosageInstruction.route from MedicineRouteOfAdministrationUvIps (preferred)
-* dosageInstruction.route ^binding.description = "EDQM"
+* dosageInstruction.doseAndRate 1..* MS
+
