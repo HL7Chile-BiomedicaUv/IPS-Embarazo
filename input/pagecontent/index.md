@@ -44,9 +44,9 @@ Antes de que el servidor envíe el resumen como un documento, se debe tener en c
 * Se debe verificar la existencia del paciente en el sistema, es decir, si es que presenta fichas clínicas para su identificación. Esto por medio de la operación *$Summary*, la cual además revisa la factibilidad del resumen. Si es que todo se encuentra de acuerdo a lo solicitado, *$Summary* agrupa los recursos dentro del repositorio para armar el documento en modo de resumen clínico del paciente. En caso de que el paciente no exista, se debe crear su ficha con sus datos, lo que es parte de otro proceso.
 * Se deben considerar los datos del paciente contenidos en los recursos almacenados. El profesional de la salud puede crear recursos o bien, puede actualizar la información. 
 
-  - **Ejemplo *(Actualizar)*:** La paciente, que ya tenía alergias, presenta una nueva alergia confirmada y diagnosticada y debe ser registrada en el sistema.
+**Ejemplo (Actualizar):** La paciente, que ya tenía alergias, presenta una nueva alergia confirmada y diagnosticada y debe ser registrada en el sistema.
 
-  - **Ejemplo *(Crear)*:** Una paciente sana presenta un problema de salud confirmado y diagnosticado, pero no se encuentra registrado, por lo que el profesional de la salud procede a crear el recurso Condition.
+**Ejemplo (Crear):** Una paciente sana presenta un problema de salud confirmado y diagnosticado, pero no se encuentra registrado, por lo que el profesional de la salud procede a crear el recurso Condition.
 
 ### Dependencias
 
