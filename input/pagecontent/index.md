@@ -48,6 +48,10 @@ Antes de que el servidor envíe el resumen como un documento, se debe tener en c
 
 **Ejemplo (Crear):** Una paciente sana presenta un problema de salud confirmado y diagnosticado, pero no se encuentra registrado, por lo que el profesional de la salud procede a crear el recurso Condition.
 
+### Perfiles
+
+{% include globals-table.xhtml %}
+
 ### Dependencias
 
 {% include dependency-table.xhtml %}
