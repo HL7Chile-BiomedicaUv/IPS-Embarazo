@@ -4,7 +4,9 @@ Profile: FechaEstimadaPartoCL
 Parent: ObservationEmbarazoFechaEstimadaDePartoClIps
 Id: Fecha-estimada-de-parto-cl-ips
 Title: "Fecha Estimada de Parto (Embarazo-CL)"
-Description: "Perfil de la fecha estimada de parto basado en la IPS chilena. Este perfil restringe el recurso Observación para representar la fecha estimada de parto de la paciente que se encuentra embarazada."
+Description: "Perfil de la fecha estimada de parto basado en la IPS chilena. Este perfil restringe el recurso Observación para representar la fecha estimada de parto de la paciente que se encuentra embarazada.
+
+Se debe tener en consideración que el "
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"

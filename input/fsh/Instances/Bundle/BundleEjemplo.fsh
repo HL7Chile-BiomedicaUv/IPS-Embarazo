@@ -13,7 +13,7 @@ Instance:    Bundle-Emb-Ejemplo
 InstanceOf:  BundleDocumentoEmbCL
 Usage:       #example
 Title:       "Bundle - Ejemplo"
-Description: "Ejemplo sobre un documento clínico tipo Bundle que representa el conjunto mínimo de datos para el Resumen Clínico de Pacientes Embarazadas a partir de IPS-CL."
+Description: "Ejemplo sobre un Bundle de tipo documento clínico que representa el conjunto mínimo de datos para el Resumen Clínico de Pacientes Embarazadas a partir de IPS-CL."
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/clembarazos/StructureDefinition/BundleEmb-documento-ips-cl"
 * identifier.system = "urn:oid:2.16.152.1.10.1" //identificador ficticio del documento; el OID 2.16.152.1 es del MINSAL, para identificar a Chile
@@ -41,6 +41,9 @@ Description: "Ejemplo sobre un documento clínico tipo Bundle que representa el 
 //Medicamento
 * entry[+].fullUrl = "urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427"
 * entry[=].resource = edbe2197-1ead-44d3-b572-4b26de4fb427
+//Prescripción Medicamento
+* entry[+].fullUrl = "urn:uuid:b16e76cc-8ee5-4ede-9dc9-7329aa49292c"
+* entry[=].resource = b16e76cc-8ee5-4ede-9dc9-7329aa49292c
 //Alergias
 * entry[+].fullUrl = "urn:uuid:4383be84-d431-47e1-85e7-80d995742514"
 * entry[=].resource = 4383be84-d431-47e1-85e7-80d995742514
@@ -59,7 +62,6 @@ Description: "Ejemplo sobre un documento clínico tipo Bundle que representa el 
 //Fecha Estimada de Parto
 * entry[+].fullUrl = "urn:uuid:660b0997-ec98-4981-92ee-bd7b5d44d215"
 * entry[=].resource = 660b0997-ec98-4981-92ee-bd7b5d44d215
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Instance: 1637493f-e222-4005-ac6b-17e7d17122e0
@@ -95,7 +97,8 @@ Usage: #inline
 * section[=].code.text = "Historial de uso de medicamentos"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Medication Name</b>: Calcio (medicamento)</div><div><b>Code</b>: <span>7947003</span></div><div><b>Status</b>: <span>active, started 2024-08-03</span></div><div>Instructions: Administrar 200 mg por día</div></li></ul></div>"
-* section[=].entry = Reference(urn:uuid:f6759f7e-630f-400e-bbe2-c8378fa6a1a5)
+* section[=].entry[0] = Reference(urn:uuid:f6759f7e-630f-400e-bbe2-c8378fa6a1a5)
+* section[=].entry[+] = Reference(urn:uuid:b16e76cc-8ee5-4ede-9dc9-7329aa49292c)
 
 * section[+].title = "Alergias"
 * section[=].code.coding.system = loinc
@@ -311,6 +314,35 @@ Usage: #inline
 * form
   * coding = EDQM#10219000 "Tablet" //En que forma se proporciona el medicamento, en este caso es en formato tableta
   * text = "Tableta"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Instance: b16e76cc-8ee5-4ede-9dc9-7329aa49292c
+InstanceOf: MedicationRequest
+Usage: #inline
+
+* status = #completed
+
+* intent = #original-order
+
+* requester = Reference(urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc)
+
+* medicationReference = Reference(urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427)
+* medicationReference.display = " Tableta de Calcio"
+
+* subject = Reference(urn:uuid:6e251b4d-1ed9-48b9-850a-138d9849507c) //Para quien es la prescripción de medicacion
+
+//Son las instrucciones sobre cómo se debe tomar el medicamento
+* dosageInstruction.text = "Administrar 200 mg por día hasta el final de la gestación." //instrucciones de dosificacion
+* dosageInstruction.timing.repeat.frequency = 1 //Instrucciones: con que frecuencia ocurre el evento: una vez al día
+* dosageInstruction.timing.repeat.period = 1 //Instrucciones: con que frecuencia ocurre el evento: día; seria una vez al día por día
+* dosageInstruction.timing.repeat.periodUnit = #d //unidad de medida de la frecuencia
+* dosageInstruction.doseAndRate.doseQuantity = 200 ucum#mg "mg" //permite definir la dosis y su frecuencia o velocidad de administracion
+
+* dosageInstruction
+  * route
+    * coding = EDQM#20002500 "Buccal use"
+    * text = "Vía de administración bucal"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

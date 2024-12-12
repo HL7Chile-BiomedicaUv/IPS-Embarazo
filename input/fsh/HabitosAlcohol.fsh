@@ -2,7 +2,7 @@ Profile: ConsumoAlcoholEmbCL
 Parent: ObservationUsoAlcoholClIps
 Id: Consumo-alcohol-cl-ips
 Title: "Hábitos: Consumo de Alcohol (Embarazo-CL)"
-Description: "Perfil de hábitos basado en la IPS chilena. Este perfil restringe el recurso Observación para representar el consumo de alcohol por parte de la paciente."
+Description: "Perfil de hábitos basado en la IPS chilena. Este perfil restringe el recurso Observación para representar el consumo de alcohol diario o semanal por parte de la paciente."
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"

@@ -5,7 +5,7 @@ Title: "Bundle Resumen Clínico Embarazos"
 Description: """
 Este perfil representa las restricciones aplicadas al recurso Bundle por la Guía de Implementación FHIR del Resumen Clínico de Pacientes Embarazadas, incluyendo restricciones locales de Chile, para ser aplicado a nivel nacional.
 
-En este caso, el Bundle es de tipo document y tiene como propósito agrupar y estructurar todos los recursos tanto del Paciente como del Composition, necesarios para conformar el resumen de pacientes embarazadas.
+En este caso, el Bundle es de tipo document y tiene como propósito agrupar y estructurar todos los recursos, partiendo como mínimo por los requeridos (Paciente y Composition); los recursos son necesarios para conformar el resumen de pacientes embarazadas.
 """
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
@@ -49,6 +49,11 @@ En este caso, el Bundle es de tipo document y tiene como propósito agrupar y es
   * resource 1..
     * ^short = "Historial de Medicamentos de la Paciente"
   * resource only Uso-de-medicamentos-cl-ips
+
+* entry[medicationrequest]
+  * resource 1..
+    * ^short = "Prescripción de Medicamentos de la Paciente"
+  * resource only Prescripcion-embarazo-cl-ips
 
 * entry[practitioner]
   * resource 1..

@@ -288,5 +288,4 @@ Description: "Códigos provenientes de SNOMED sobre si la paciente consume o no 
 * SNOMED_CT_INT#767113005 "Product containing calcium (medicinal product)"
 * SNOMED_CT_INT#108943009 "Product containing colecalciferol (medicinal product)"
 * SNOMED_CT_INT#46123006 "Product containing ascorbic acid (medicinal product)"
-* SNOMED_CT_INT#346441008 "Product containing fish derived omega 3 fatty acid (medicinal product)"
 * SNOMED_CT_INT#787481004 "No known medications"

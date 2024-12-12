@@ -28,7 +28,7 @@ Description: """Documento clínico utilizado para representar el conjunto de dat
 Un documento de Resumen de Datos Clínicos de Pacientes Embarazadas es un extracto de historia clínica electrónica que contiene información sanitaria esencial sobre la paciente y su estado actual.
 El conjunto de datos es mínimo y no exhaustivo; independiente de la especialidad y la afección; pero sigue siendo clínicamente relevante. Está diseñado para apoyar el caso de uso de la «atención transfronteriza no planificada», pero no se limita a él. Este pretende ser utilizado para su aplicación global más allá de una región o país concretos, ya sea para una paciente embarazada que llega al país o para una paciente que sale del país o región particular.
 
-Este perfil se basa en el perfil ClinicalDocument."""
+El Composition proporciona la narrativa necesaria para que el documento clínico sea legible y comprensible. Además, proporciona los metadatos del documento."""
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
@@ -95,9 +95,8 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionMedicamentos].entry ^slicing.rules = #open
 * section[sectionMedicamentos].entry ^short = "Medicamentos relevantes para la salud del paciente"
 * section[sectionMedicamentos].entry ^definition = "Esta lista los medicamentos relevantes para el ámbito del resumen del paciente o se utiliza para indicar que se sabe que el sujeto no toma ninguna medicación relevante; o bien que no se dispone de información sobre medicamentos."
- //   prescripciones 0..*
 * section[sectionMedicamentos].entry[listMedicamentos] only Reference(UsoDeMedicamentoCL)
-//* section[sectionMedicamentos].entry[prescripciones] only Reference(PrescripcionClIps)
+* section[sectionMedicamentos].entry[prescripciones] only Reference(PrescripcionEmbClIps)
 
 //* section[sectionAlergias] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 //* section[sectionAlergias] ^extension[=].valueString = "Sección"

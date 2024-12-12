@@ -2,7 +2,9 @@ Profile: ConsumoDrogasDurasyBlandasEmbCL
 Parent: ObservationUsoTabacoClIps
 Id: Consumo-drogas-duras-y-blandas-cl-ips
 Title: "Hábitos: Consumo de drogas duras y blandas (Embarazo-CL)"
-Description: "Perfil de hábitos basado en la IPS chilena. Este perfil restringe el recurso Observación para representar el consumo por parte de la paciente respecto a algún tipo de droga ya sea dura y/o blanda."
+Description: "Perfil de hábitos basado en la IPS chilena. Este perfil restringe el recurso Observación para representar el consumo de drogas blandas y/o duras por parte de la paciente.
+
+Las drogas blandas hacen referencia a todas aquellas que no se consideran tan adictivas y menos perjudiciales para la salud del paciente, tales como el tabaco y cannabis. Mientras que, las drogas duras, tienen un alto potencial adictivo y son mucho más dañinas."
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"

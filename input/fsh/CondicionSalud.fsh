@@ -2,7 +2,7 @@ Profile: CondicionSaludCL
 Parent: ConditionClIps
 Id: Condicion-de-salud-cl-ips
 Title: "Condición de salud (Embarazo-CL)"
-Description: "Perfil del uso de medicamentos basado en la IPS chilena. Este perfil restringe el recurso MedicationStatement para representar el uso de medicamentos por parte de la paciente."
+Description: "Perfil de condición de salud basado en la IPS chilena. Este perfil restringe el recurso Condition para representar condiciones o patologías que puede padecer la paciente."
 
 * ^version = "0.1.0"
 * ^publisher = "HL7 Chile"

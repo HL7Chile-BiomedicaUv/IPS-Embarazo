@@ -36,6 +36,7 @@ Description: "Ejemplo sobre un documento clínico que representa un conjunto de 
 * section[sectionMedicamentos].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Medication Name</b>: Calcio (medicamento)</div><div><b>Code</b>: <span>7947003</span></div><div><b>Status</b>: <span>active, started 2024-08-03</span></div><div>Instructions: Administrar 200 mg por día</div></li></ul></div>"
 
 * section[sectionMedicamentos].entry[listMedicamentos] = Reference(UsoMedicamento-Emb-Ejemplo)
+* section[sectionMedicamentos].entry[prescripciones] = Reference(Prescripcion-CL-Ejemplo)
 
 * section[sectionAlergias].title = "Alergias"
 * section[sectionAlergias].code.coding.system = loinc

@@ -19,7 +19,7 @@ Description: "Ejemplo sobre la declaración de uso de medicación de la paciente
 * effectivePeriod.start = "2024-08-03" //comenzó con el uso de tabletas durante junio
 //* effectivePeriod.end = "2019-02-07"
 
-* dosage.text = "Administrar 200 mg/día"
+* dosage.text = "Se consume una tableta de calcio de 200 mg/día"
 * dosage.timing.repeat.frequency = 1 //con que frecuencia ocurre el evento: el tratamiento es una vez
 * dosage.timing.repeat.period = 1 //con que frecuencia ocurre el evento: un día; seria una vez al día
 * dosage.timing.repeat.periodUnit = #d //unidad de medida de la frecuencia
@@ -32,5 +32,5 @@ Description: "Ejemplo sobre la declaración de uso de medicación de la paciente
 
 * note.text = """
 ### NOTA:
-Administrar una tableta por día a partir de las 20 semanas hasta el final de la gestación.
+Se administra una tableta por día a partir de las 20 semanas hasta el final de la gestación.
 """
