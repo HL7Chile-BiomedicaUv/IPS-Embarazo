@@ -1,4 +1,4 @@
-A continuación se presentan los objetivos que tiene esta guía de implementación:
+A continuación, se presentan los objetivos que tiene esta guía de implementación:
 
 ### Objetivo General
 
