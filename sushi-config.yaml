@@ -5,8 +5,8 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.cl.clembarazos
 canonical: https://hl7chile.cl/fhir/ig/clembarazos
-name: Guia Resumen Embarazos
-title: Resumen Clínicos de Pacientes Embarazadas Chile
+name: Guía Resumen Embarazos
+title: Resumen Clínico de Pacientes Embarazadas Chile
 description: Guía de resumen de embarazos basada en la guía IPS nacional.
 status: draft # draft | active | retired | unknown
 version: 0.1.0

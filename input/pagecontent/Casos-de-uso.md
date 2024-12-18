@@ -27,11 +27,13 @@ En este caso, el recurso asociado corresponde al **Bundle**, ya que luego de la 
 
 ##### Operación FHIR
 
-Para la solicitud del resumen, se utiliza la operación **$Summary** por medio de un **POST**, la cual devuelve un Bundle de tipo Documento IPS.
+Para la solicitud del resumen, se utiliza la operación **$Summary** por medio de un **POST** o un **GET**, devolviendo un Bundle de tipo Documento IPS.
 <br>
 
 ```
 POST [base]/Patient/[id]/$summary
+
+GET [base]/Patient/[id]/$summary
 ```
 
 #### Caso de Uso 2: Crear recurso
